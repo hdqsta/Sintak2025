@@ -10,7 +10,7 @@ const Product = () => {
     { id: "all", name: "Semua" },
     { id: "fashion", name: "Fashion" },
     { id: "kain", name: "Kain Batik" },
-    { id: "decor", name: "Decoration" },
+    { id: "decor", name: "Dekorasi" },
     { id: "souvenir", name: "Souvenir" },
   ]
 
@@ -138,7 +138,7 @@ const Product = () => {
     {
       id: 13,
       title: "Batik Balian",
-      category: "fashion",
+      category: "kain",
       client: "Batik Keris",
       year: "2023",
       description: "Desain batik yang terinspirasi dari Bali.",
@@ -148,7 +148,7 @@ const Product = () => {
     {
       id: 14,
       title: "Batik Kawung",
-      category: "fashion",
+      category: "kain",
       client: "Batik Keris",
       year: "2023",
       description: "Koleksi batik dengan motif Kawung.",
@@ -158,7 +158,7 @@ const Product = () => {
     {
       id: 15,
       title: "Batik Mega Mendung",
-      category: "fashion",
+      category: "kain",
       client: "Batik Keris",
       year: "2023",
       description: "Desain batik Mega Mendung yang khas.",
@@ -168,7 +168,7 @@ const Product = () => {
     {
       id: 16,
       title: "Batik Parang",
-      category: "fashion",
+      category: "kain",
       client: "Batik Keris",
       year: "2023",
       description: "Koleksi batik dengan motif Parang.",
@@ -177,8 +177,8 @@ const Product = () => {
     },
     {
       id: 17,
-      title: "Batik Parangg",
-      category: "fashion",
+      title: "Batik Parang 2",
+      category: "kain",
       client: "Batik Keris",
       year: "2023",
       description: "Desain batik Parangg yang unik.",
@@ -188,7 +188,7 @@ const Product = () => {
     {
       id: 18,
       title: "Batik Solo Truntum",
-      category: "fashion",
+      category: "kain",
       client: "Batik Keris",
       year: "2023",
       description: "Koleksi batik Solo Truntum yang elegan.",
@@ -197,7 +197,7 @@ const Product = () => {
     },
     {
       id: 19,
-      title: "Dekorasi Batik 1",
+      title: "Hiasan Dinding 1",
       category: "decor", 
       client: "Batik Keris",
       year: "2023",
@@ -207,7 +207,7 @@ const Product = () => {
     },
     {
       id: 20,
-      title: "Dekor Dinding",
+      title: "Hiasan Dinding 2",
       category: "decor",
       client: "Batik Keris",
       year: "2023",
@@ -227,7 +227,7 @@ const Product = () => {
     },
     {
       id: 22,
-      title: "Kawung 2",
+      title: "Batik Kawung 2",
       category: "kain",
       client: "Batik Keris",
       year: "2023",
@@ -237,7 +237,7 @@ const Product = () => {
     },
     {
       id: 23,
-      title: "Mega Mendung",
+      title: "Batik Mega Mendung 2",
       category: "kain",
       client: "Batik Keris",
       year: "2023",
@@ -247,7 +247,7 @@ const Product = () => {
     },
     {
       id: 24,
-      title: "Sekar Jagad 3",
+      title: " Batik Sekar Jagad 1",
       category: "kain",
       client: "Batik Keris",
       year: "2023",
@@ -257,7 +257,7 @@ const Product = () => {
     },
     {
       id: 25,
-      title: "Sekar Jagad 4",
+      title: "Batik Sekar Jagad 2",
       category: "kain",
       client: "Batik Keris",
       year: "2023",
@@ -267,7 +267,7 @@ const Product = () => {
     },
     {
       id: 26,
-      title: "Sekar Jagat 1",
+      title: "Batik Sekar Jagat 3",
       category: "kain",
       client: "Batik Keris",
       year: "2023",
@@ -277,7 +277,7 @@ const Product = () => {
     },
     {
       id: 27,
-      title: "Sekatr Jagad 2",
+      title: "Batik Sekar Jagad 4",
       category: "kain",
       client: "Batik Keris",
       year: "2023",
@@ -297,7 +297,7 @@ const Product = () => {
     },
     {
       id: 29,
-      title: "Souvenir 11",
+      title: "Souvenir 2",
       category: "souvenir",
       client: "Batik Keris",
       year: "2023",
