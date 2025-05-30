@@ -10,7 +10,7 @@ const Blog = () => {
     date: "15 Januari 2024",
     category: "Budaya",
     readTime: "8 min",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/blog/batik_1.jpg", 
   }
 
   const blogPosts = [
@@ -22,7 +22,7 @@ const Blog = () => {
       date: "12 Januari 2024",
       category: "Fashion",
       readTime: "5 min",
-      image: "/placeholder.svg?height=250&width=400",
+      image: "/blog/batik_2.jpg",
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ const Blog = () => {
       date: "10 Januari 2024",
       category: "Proses",
       readTime: "6 min",
-      image: "/placeholder.svg?height=250&width=400",
+      image: "/blog/batik_3.jpg",
     },
     {
       id: 4,
@@ -43,7 +43,7 @@ const Blog = () => {
       date: "8 Januari 2024",
       category: "Tren",
       readTime: "4 min",
-      image: "/placeholder.svg?height=250&width=400",
+      image: "/blog/batik_4.jpg",
     },
     {
       id: 5,
@@ -53,7 +53,7 @@ const Blog = () => {
       date: "5 Januari 2024",
       category: "Tips",
       readTime: "3 min",
-      image: "/placeholder.svg?height=250&width=400",
+      image: "/blog/batik_5.jpg",
     },
     {
       id: 6,
@@ -64,7 +64,7 @@ const Blog = () => {
       date: "3 Januari 2024",
       category: "Budaya",
       readTime: "7 min",
-      image: "/placeholder.svg?height=250&width=400",
+      image: "/blog/batik_6.jpg",
     },
     {
       id: 7,
@@ -75,7 +75,7 @@ const Blog = () => {
       date: "1 Januari 2024",
       category: "Inspirasi",
       readTime: "5 min",
-      image: "/placeholder.svg?height=250&width=400",
+      image: "/blog/batik_7.jpg",
     },
   ]
 
