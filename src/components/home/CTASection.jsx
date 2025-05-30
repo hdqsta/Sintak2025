@@ -38,7 +38,7 @@ const CTASection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
           <div className="flex items-center justify-center space-x-3 text-batik-cream">
             <Phone size={20} className="text-batik-gold" />
-            <span>+62 21 1234 5678</span>
+            <span>+62 895-2489-3101</span>
           </div>
 
           <div className="flex items-center justify-center space-x-3 text-batik-cream">

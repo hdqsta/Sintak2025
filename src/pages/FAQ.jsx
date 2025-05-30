@@ -16,14 +16,14 @@ const FAQ = () => {
       title: "Umum",
       faqs: [
         {
-          question: "Apa itu Batik Nusantara?",
+          question: "Apa itu Domesa.co?",
           answer:
             "Batik Nusantara adalah perusahaan yang bergerak di bidang handycraft Indonesia, khususnya batik dan produk budaya tradisional dengan sentuhan modern. Kami didirikan pada tahun 2009 dengan misi melestarikan warisan budaya Indonesia melalui inovasi dan kualitas tinggi.",
         },
         {
           question: "Di mana lokasi workshop dan showroom Batik Nusantara?",
           answer:
-            "Workshop utama kami berlokasi di Yogyakarta, tepatnya di Jl. Malioboro No. 123. Kami juga memiliki showroom di Jakarta dan Surabaya. Untuk kunjungan, mohon hubungi kami terlebih dahulu untuk membuat janji.",
+            "Workshop utama kami berlokasi di Palembang, tepatnya di Pasar Kito Tradisional Kompleks Ilir Barat Permai . Untuk kunjungan, mohon hubungi kami terlebih dahulu untuk membuat janji.",
         },
         {
           question: "Apakah produk Batik Nusantara menggunakan bahan alami?",
@@ -241,7 +241,7 @@ const FAQ = () => {
               </div>
               <h3 className="font-serif text-xl font-semibold text-batik-brown mb-2">Telepon</h3>
               <p className="text-gray-600 mb-4">Hubungi hotline customer service kami</p>
-              <button className="btn-primary">+62 21 1234 5678</button>
+              <button className="btn-primary">+62 895-2489-3101</button>
             </div>
 
             <div className="text-center">

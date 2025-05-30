@@ -62,7 +62,7 @@ const About = () => {
                 <div className="absolute inset-0 batik-pattern opacity-20"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-batik-brown">
-                    <div className="text-6xl font-serif font-bold mb-4">1999</div>
+                    <div className="text-6xl font-serif font-bold mb-4">2009</div>
                     <div className="text-lg">Tahun Didirikan</div>
                   </div>
                 </div>
