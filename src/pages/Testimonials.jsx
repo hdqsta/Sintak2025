@@ -12,7 +12,7 @@ const Testimonials = () => {
         "Kualitas produk luar biasa! Tim Batik Nusantara sangat profesional dan hasil akhir melebihi ekspektasi kami. Seragam korporat yang mereka buat mendapat apresiasi tinggi dari seluruh karyawan.",
       project: "Seragam Korporat",
       date: "Januari 2024",
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/testimonials/profil1.jpg",
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const Testimonials = () => {
         "Pelayanan excellent dan produk berkualitas tinggi. Mereka berhasil menyelesaikan 500 souvenir pernikahan dalam waktu yang sangat ketat. Sangat merekomendasikan!",
       project: "Souvenir Pernikahan",
       date: "Desember 2023",
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/testimonials/profil3.jpg",
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ const Testimonials = () => {
         "Kolaborasi yang luar biasa! Mereka memahami visi kreatif dengan sempurna dan mengeksekusinya dengan detail yang menakjubkan. Hasil fashion show kami sukses besar.",
       project: "Fashion Show Collection",
       date: "November 2023",
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/testimonials/profil2.jpg",
     },
     {
       id: 4,
@@ -48,7 +48,7 @@ const Testimonials = () => {
         "Sebagai institusi yang bergerak di bidang pelestarian budaya, kami sangat mengapresiasi dedikasi Batik Nusantara dalam menjaga kualitas dan keaslian motif tradisional.",
       project: "Koleksi Museum",
       date: "Oktober 2023",
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/testimonials/profil4.jpg",
     },
     {
       id: 5,
@@ -60,11 +60,11 @@ const Testimonials = () => {
         "Proyek dekorasi hotel dengan mereka berjalan sangat lancar. Tim sangat responsif dan kreatif dalam memberikan solusi desain yang sesuai dengan konsep yang kami inginkan.",
       project: "Hotel Interior",
       date: "September 2023",
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/testimonials/profil10.jpg",
     },
     {
       id: 6,
-      name: "Pak Joko Widodo",
+      name: "Pak Joko",
       role: "Pengusaha",
       company: "Toko Batik Malioboro",
       rating: 5,
@@ -72,7 +72,7 @@ const Testimonials = () => {
         "Sudah 5 tahun bermitra dengan Batik Nusantara untuk supply produk di toko kami. Kualitas konsisten, pengiriman tepat waktu, dan pelayanan yang memuaskan.",
       project: "Partnership Supply",
       date: "Ongoing",
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/testimonials/profil5.jpg",
     },
   ]
 
