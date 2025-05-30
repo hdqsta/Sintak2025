@@ -1,4 +1,5 @@
 import { Palette, Shirt, Home, Gift } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const ServicesSection = () => {
   const services = [
@@ -67,7 +68,12 @@ const ServicesSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="btn-primary">Lihat Semua Produk</button>
+        <Link
+              to="/product"
+              className="btn-primary inline-flex items-center"
+            >
+              Jelajahi Produk
+            </Link>
         </div>
       </div>
     </section>
