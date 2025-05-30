@@ -80,4 +80,12 @@ const ServicesSection = () => {
   )
 }
 
+            <Link
+              to="/portfolio"
+              className="btn-primary inline-flex items-center"
+            >
+              Jelajahi Produk
+              <ArrowRight className="ml-2" size={20} />
+            </Link>
+
 export default ServicesSection
