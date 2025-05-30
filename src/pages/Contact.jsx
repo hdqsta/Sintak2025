@@ -40,7 +40,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: ["info@batiknusantara.com", "sales@batiknusantara.com"],
+      details: ["info@domesa.co", "sales@domesa.co"],
     },
     {
       icon: Clock,
@@ -200,7 +200,7 @@ const Contact = () => {
                   Telepon Sekarang
                 </a>
                 <a
-                  href="mailto:info@batiknusantara.com"
+                  href="mailto:info@domesa.co"
                   className="bg-batik-brown text-white text-center py-3 px-4 rounded-lg hover:bg-batik-navy transition-colors duration-300"
                 >
                   Kirim Email

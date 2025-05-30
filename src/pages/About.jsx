@@ -6,21 +6,25 @@ const About = () => {
       name: "M. Hatta Siddiq",
       role: "Founder & CEO",
       description: "Pengalaman 20 tahun di industri batik dan fashion",
+      image: "/about/hatta.jpg",
     },
     {
       name: "Evania Loveola",
       role: "Creative Director",
       description: "Desainer senior dengan spesialisasi motif tradisional",
+      image: "/about/person_13924070.png",
     },
     {
       name: "Aidilya Laila Andhini",
       role: "Production Manager",
       description: "Ahli dalam manajemen produksi dan quality control",
+      image: "/about/person_13924070.png",
     },
     {
       name: "Eka Rahayu",
       role: "Marketing Director",
       description: "Strategi pemasaran dan pengembangan bisnis",
+      image: "/about/person_13924070.png",
     },
   ]
 
@@ -122,8 +126,8 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
               <div key={index} className="text-center group">
-                <div className="w-32 h-32 bg-gradient-to-br from-batik-gold/20 to-batik-brown/20 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:shadow-lg transition-shadow duration-300">
-                  <Users className="text-batik-brown" size={40} />
+                <div className="w-32 h-32 bg-gradient-to-br from-batik-gold/20 to-batik-brown/20 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                  <img src={member.image} alt={member.name} className="w-full h-full object-cover rounded-full" />
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-batik-brown mb-2">{member.name}</h3>
                 <p className="text-batik-gold font-medium mb-3">{member.role}</p>

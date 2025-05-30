@@ -11,7 +11,7 @@ const Legal = () => {
     {
       icon: FileText,
       title: "Syarat & Ketentuan",
-      description: "Aturan dan ketentuan penggunaan layanan Batik Nusantara",
+      description: "Aturan dan ketentuan penggunaan layanan Domesa",
       lastUpdated: "10 Januari 2024",
     },
     {
@@ -38,7 +38,7 @@ const Legal = () => {
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Transparansi dan kepercayaan adalah fondasi bisnis kami. Pelajari kebijakan dan ketentuan yang mengatur
-            layanan Batik Nusantara.
+            layanan Domesa.
           </p>
         </div>
       </section>
@@ -141,7 +141,7 @@ const Legal = () => {
               <div>
                 <h3 className="font-semibold text-batik-brown mb-3">1. Penerimaan Ketentuan</h3>
                 <p>
-                  Dengan menggunakan layanan Batik Nusantara, Anda menyetujui untuk terikat dengan syarat dan ketentuan
+                  Dengan menggunakan layanan Domesa, Anda menyetujui untuk terikat dengan syarat dan ketentuan
                   ini. Jika Anda tidak setuju, mohon untuk tidak menggunakan layanan kami.
                 </p>
               </div>
@@ -179,7 +179,7 @@ const Legal = () => {
               <div>
                 <h3 className="font-semibold text-batik-brown mb-3">5. Hak Kekayaan Intelektual</h3>
                 <p>
-                  Semua desain, motif, dan karya seni yang dibuat oleh Batik Nusantara dilindungi hak cipta. Penggunaan
+                  Semua desain, motif, dan karya seni yang dibuat oleh Domesa dilindungi hak cipta. Penggunaan
                   tanpa izin dapat dikenakan sanksi hukum.
                 </p>
               </div>
@@ -293,7 +293,7 @@ const Legal = () => {
                 <p>
                   Jika Anda mencurigai adanya aktivitas mencurigakan pada akun Anda atau menemukan celah keamanan,
                   segera hubungi tim security kami di
-                  <span className="font-semibold text-batik-brown"> security@batiknusantara.com</span>
+                  <span className="font-semibold text-batik-brown"> security@domesa.co</span>
                 </p>
               </div>
             </div>
@@ -306,7 +306,7 @@ const Legal = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">Pertanyaan Legal?</h2>
           <p className="text-xl text-batik-cream mb-8 max-w-3xl mx-auto">
-            Tim legal kami siap membantu menjawab pertanyaan seputar kebijakan dan ketentuan layanan Batik Nusantara.
+            Tim legal kami siap membantu menjawab pertanyaan seputar kebijakan dan ketentuan layanan Domesa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-batik-gold hover:bg-batik-gold/90 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
@@ -320,7 +320,7 @@ const Legal = () => {
           <div className="mt-12 pt-8 border-t border-white/20 text-batik-cream">
             <p className="text-sm">
               Dokumen terakhir diperbarui: 15 Januari 2024 |
-              <span className="ml-2">Email: legal@batiknusantara.com</span>
+              <span className="ml-2">Email: legal@domesa.co</span>
             </p>
           </div>
         </div>
