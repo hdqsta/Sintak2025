@@ -43,7 +43,7 @@ const CTASection = () => {
 
           <div className="flex items-center justify-center space-x-3 text-batik-cream">
             <Mail size={20} className="text-batik-gold" />
-            <span>info@batiknusantara.com</span>
+            <span>info@domesa.co</span>
           </div>
         </div>
 

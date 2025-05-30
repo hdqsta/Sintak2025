@@ -9,7 +9,7 @@ const Testimonials = () => {
       company: "PT. Nusantara Jaya",
       rating: 5,
       content:
-        "Kualitas produk luar biasa! Tim Batik Nusantara sangat profesional dan hasil akhir melebihi ekspektasi kami. Seragam korporat yang mereka buat mendapat apresiasi tinggi dari seluruh karyawan.",
+        "Kualitas produk luar biasa! Tim Domesa sangat profesional dan hasil akhir melebihi ekspektasi kami. Seragam korporat yang mereka buat mendapat apresiasi tinggi dari seluruh karyawan.",
       project: "Seragam Korporat",
       date: "Januari 2024",
       image: "/testimonials/profil1.jpg",
@@ -45,7 +45,7 @@ const Testimonials = () => {
       company: "Museum Batik Indonesia",
       rating: 5,
       content:
-        "Sebagai institusi yang bergerak di bidang pelestarian budaya, kami sangat mengapresiasi dedikasi Batik Nusantara dalam menjaga kualitas dan keaslian motif tradisional.",
+        "Sebagai institusi yang bergerak di bidang pelestarian budaya, kami sangat mengapresiasi dedikasi Domesa dalam menjaga kualitas dan keaslian motif tradisional.",
       project: "Koleksi Museum",
       date: "Oktober 2023",
       image: "/testimonials/profil4.jpg",
@@ -69,7 +69,7 @@ const Testimonials = () => {
       company: "Toko Batik Malioboro",
       rating: 5,
       content:
-        "Sudah 5 tahun bermitra dengan Batik Nusantara untuk supply produk di toko kami. Kualitas konsisten, pengiriman tepat waktu, dan pelayanan yang memuaskan.",
+        "Sudah 5 tahun bermitra dengan Domesa untuk supply produk di toko kami. Kualitas konsisten, pengiriman tepat waktu, dan pelayanan yang memuaskan.",
       project: "Partnership Supply",
       date: "Ongoing",
       image: "/testimonials/profil5.jpg",

@@ -21,12 +21,12 @@ const FAQ = () => {
             "Domesa adalah perusahaan yang bergerak di bidang handycraft Indonesia, khususnya batik dan produk budaya tradisional dengan sentuhan modern. Kami didirikan pada tahun 2009 dengan misi melestarikan warisan budaya Indonesia melalui inovasi dan kualitas tinggi.",
         },
         {
-          question: "Di mana lokasi workshop dan showroom Batik Nusantara?",
+          question: "Di mana lokasi workshop dan showroom Domesa?",
           answer:
             "Workshop utama kami berlokasi di Palembang, tepatnya di Pasar Kito Tradisional Kompleks Ilir Barat Permai . Untuk kunjungan, mohon hubungi kami terlebih dahulu untuk membuat janji.",
         },
         {
-          question: "Apakah produk Batik Nusantara menggunakan bahan alami?",
+          question: "Apakah produk Domesa menggunakan bahan alami?",
           answer:
             "Ya, kami mengutamakan penggunaan bahan-bahan alami berkualitas tinggi. Untuk batik tradisional, kami menggunakan pewarna alami dan kain katun premium. Namun, untuk beberapa produk modern, kami juga menggunakan bahan sintetis berkualitas tinggi sesuai kebutuhan desain.",
         },
@@ -78,7 +78,7 @@ const FAQ = () => {
         {
           question: "Bagaimana packaging untuk produk yang dikirim?",
           answer:
-            "Semua produk dikemas dengan sangat hati-hati menggunakan bubble wrap, box khusus, dan asuransi pengiriman. Untuk produk premium, kami menggunakan packaging eksklusif dengan branding Batik Nusantara.",
+            "Semua produk dikemas dengan sangat hati-hati menggunakan bubble wrap, box khusus, dan asuransi pengiriman. Untuk produk premium, kami menggunakan packaging eksklusif dengan branding Domesa.",
         },
       ],
     },
@@ -123,7 +123,7 @@ const FAQ = () => {
             Frequently Asked Questions
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Temukan jawaban untuk pertanyaan yang sering diajukan seputar produk dan layanan Batik Nusantara.
+            Temukan jawaban untuk pertanyaan yang sering diajukan seputar produk dan layanan Domesa.
           </p>
 
           {/* Search Bar */}
@@ -250,7 +250,7 @@ const FAQ = () => {
               </div>
               <h3 className="font-serif text-xl font-semibold text-batik-brown mb-2">Email</h3>
               <p className="text-gray-600 mb-4">Kirim pertanyaan detail via email</p>
-              <button className="btn-primary">info@batiknusantara.com</button>
+              <button className="btn-primary">info@domesa.co</button>
             </div>
           </div>
 

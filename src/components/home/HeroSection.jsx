@@ -433,10 +433,10 @@ const HeroSection = () => {
             style={{ animationDelay: "0.3s" }}
           >
             <Link
-              to="/services"
+              to="/special-offers"
               className="btn-primary inline-flex items-center"
             >
-              Jelajahi Produk
+              Lihat Penawaran Spesial
               <ArrowRight className="ml-2" size={20} />
             </Link>
 
