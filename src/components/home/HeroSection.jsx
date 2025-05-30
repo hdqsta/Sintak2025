@@ -514,7 +514,7 @@ const HeroSection = () => {
             style={{ animationDelay: "0.3s" }}
           >
             <Link
-              to="/services"
+              to="/product"
               className="w-full sm:w-auto bg-batik-gold hover:bg-batik-brown text-white font-semibold py-2.5 sm:py-3 px-5 sm:px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center text-sm sm:text-base"
             >
               Jelajahi Produk
