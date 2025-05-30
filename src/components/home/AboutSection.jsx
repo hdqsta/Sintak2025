@@ -5,7 +5,7 @@ const AboutSection = () => {
     <section className="py-20 bg-batik-cream/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-batik-brown mb-4">Tentang Batik Nusantara</h2>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-batik-brown mb-4">Tentang Domesa.co</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Kami adalah perusahaan yang berdedikasi untuk melestarikan dan mengembangkan warisan budaya Indonesia
             melalui produk handycraft berkualitas tinggi.

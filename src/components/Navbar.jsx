@@ -11,7 +11,6 @@ const Navbar = () => {
   const navigation = [
     { name: "Beranda", href: "/" },
     { name: "Tentang Kami", href: "/about" },
-    { name: "Layanan", href: "/services" },
     { name: "Portofolio", href: "/portfolio" },
     { name: "Testimoni", href: "/testimonials" },
     { name: "Blog", href: "/blog" },
@@ -28,7 +27,7 @@ const Navbar = () => {
               <div className="w-10 h-10 bg-batik-gold rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">B</span>
               </div>
-              <span className="font-serif text-xl font-bold text-batik-brown">Batik Nusantara</span>
+              <span className="font-serif text-xl font-bold text-batik-brown">Domesa.co</span>
             </Link>
           </div>
 
