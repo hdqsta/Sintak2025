@@ -990,7 +990,7 @@ const Product = () => {
                         Telepon
                       </div>
                       <div className="text-sm text-gray-600">
-                        +62 21 1234 5678
+                        +62 895-2489-3101
                       </div>
                     </div>
                   </div>
@@ -1008,7 +1008,7 @@ const Product = () => {
                     <div>
                       <div className="font-medium text-batik-brown">Lokasi</div>
                       <div className="text-sm text-gray-600">
-                        Yogyakarta, Indonesia
+                        Palembang, Indonesia
                       </div>
                     </div>
                   </div>
