@@ -823,7 +823,7 @@ const HeroSection = () => {
                   setWaxLineColor("#DAA520");
                   setColoringTarget("fabric");
                 }}
-                className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200"
+                className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 mb-12"
               >
                 Reset Canvas
               </button>
