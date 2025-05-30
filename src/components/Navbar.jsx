@@ -20,7 +20,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="relative shadow-lg sticky top-0 z-50 bg-white overflow-hidden">
+    <nav className=" shadow-lg sticky top-0 z-50 bg-white overflow-hidden">
       <div className="absolute left-0 top-0 h-full w-48 z-0">
         <img
           src="/home-pages/navbar/batik-motif.webp"
