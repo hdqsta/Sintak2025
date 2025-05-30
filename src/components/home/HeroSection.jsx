@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
@@ -27,6 +27,22 @@ const HeroSection = () => {
   const canvasRef = useRef(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [waxLines, setWaxLines] = useState([]);
+
+  // Animation states for title
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [showCanting, setShowCanting] = useState(true);
+  const [cantingAnimationPosition, setCantingAnimationPosition] = useState({
+    x: 0,
+    y: 0,
+  });
+  const [completedWords, setCompletedWords] = useState([]);
+
+  const titleWords = [
+    { text: "Warisan", delay: 0 },
+    { text: "Budaya", delay: 1500 },
+    { text: "Indonesia", delay: 3000 },
+    { text: "Modern", delay: 4500 },
+  ];
 
   const steps = [
     { name: "Sketsa", color: "bg-batik-cream", icon: "✏️" },
@@ -68,6 +84,40 @@ const HeroSection = () => {
     { name: "Truntum", description: "Motif bunga kecil" },
     { name: "Sekar Jagad", description: "Motif bunga dunia" },
   ];
+
+  // Title animation effect
+  useEffect(() => {
+    const animateTitle = () => {
+      titleWords.forEach((word, index) => {
+        setTimeout(() => {
+          // Animate canting to word position
+          const wordPositions = [
+            { x: 20, y: 30 }, // Warisan
+            { x: 50, y: 30 }, // Budaya
+            { x: 20, y: 70 }, // Indonesia
+            { x: 50, y: 70 }, // Modern
+          ];
+
+          setCantingAnimationPosition(wordPositions[index]);
+          setCurrentWordIndex(index);
+
+          // Show word after canting reaches position
+          setTimeout(() => {
+            setCompletedWords((prev) => [...prev, index]);
+          }, 800);
+
+          // Hide canting after last word
+          if (index === titleWords.length - 1) {
+            setTimeout(() => {
+              setShowCanting(false);
+            }, 1200);
+          }
+        }, word.delay);
+      });
+    };
+
+    animateTitle();
+  }, []);
 
   // Handle mouse movement for canting tool
   const handleMouseMove = (e) => {
@@ -417,31 +467,62 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-batik-brown mb-6 mt-12">
-            Warisan Budaya
-            <span className="block text-batik-gold">Indonesia Modern</span>
-          </h1>
+          {/* Animated Title with Canting */}
+          <div className="relative mb-6">
+            {/* Animated Canting Tool */}
+            {showCanting && (
+              <div
+                className="absolute z-20 transition-all duration-1000 ease-in-out"
+                style={{
+                  left: `${cantingAnimationPosition.x}%`,
+                  top: `${cantingAnimationPosition.y}%`,
+                  transform: "translate(-50%, -50%)",
+                }}
+              >
+                <div className="relative animate-bounce">
+                  <div className="w-12 h-2 bg-gradient-to-r from-batik-brown to-batik-gold rounded-full shadow-lg"></div>
+                  <div className="absolute -right-1 -top-1 w-4 h-4 bg-batik-gold rounded-full shadow-lg animate-pulse">
+                    <div className="absolute inset-0 bg-orange-400 rounded-full animate-ping opacity-75"></div>
+                  </div>
+                  <div className="absolute -right-0.5 top-0 w-1.5 h-1.5 bg-yellow-300 rounded-full animate-bounce"></div>
 
-          <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto animate-slide-up">
-            Temukan keindahan handycraft Indonesia yang memadukan tradisi batik
-            dengan desain kontemporer. Coba pengalaman membatik interaktif di
-            bawah ini!
-          </p>
+                  {/* Wax drops from canting */}
+                  <div className="absolute -bottom-2 -right-1 w-1 h-1 bg-yellow-400 rounded-full animate-ping"></div>
+                  <div
+                    className="absolute -bottom-3 right-0 w-0.5 h-0.5 bg-orange-300 rounded-full animate-ping"
+                    style={{ animationDelay: "0.2s" }}
+                  ></div>
+                </div>
+              </div>
+            )}
+
+            {/* Title Text */}
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-batik-brown mb-4 sm:mb-6 mt-8 sm:mt-12 leading-tight">
+              <span className="block">Warisan Budaya</span>
+              <span className="block text-batik-gold">Indonesia Modern</span>
+            </h1>
+
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto animate-slide-up px-4 sm:px-0 leading-relaxed">
+              Temukan keindahan handycraft Indonesia yang memadukan tradisi
+              batik dengan desain kontemporer. Coba pengalaman membatik
+              interaktif di bawah ini!
+            </p>
+          </div>
 
           <div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center animate-slide-up px-4 sm:px-0"
             style={{ animationDelay: "0.3s" }}
           >
             <Link
               to="/services"
-              className="btn-primary inline-flex items-center"
+              className="w-full sm:w-auto bg-batik-gold hover:bg-batik-brown text-white font-semibold py-2.5 sm:py-3 px-5 sm:px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center text-sm sm:text-base"
             >
               Jelajahi Produk
-              <ArrowRight className="ml-2" size={20} />
+              <ArrowRight className="ml-2" size={16} />
             </Link>
 
-            <button className="btn-secondary inline-flex items-center">
-              <Play className="mr-2" size={20} />
+            <button className="w-full sm:w-auto border-2 border-batik-brown text-batik-brown hover:bg-batik-brown hover:text-white font-semibold py-2.5 sm:py-3 px-5 sm:px-6 rounded-lg transition-all duration-300 inline-flex items-center justify-center text-sm sm:text-base">
+              <Play className="mr-2" size={16} />
               Tonton Video
             </button>
           </div>
@@ -452,10 +533,10 @@ const HeroSection = () => {
           <div className="w-full max-w-6xl mx-auto">
             {/* Instructions */}
             {showInstructions && (
-              <div className="mb-6 bg-batik-gold/10 border border-batik-gold/30 rounded-lg p-4 animate-bounce">
+              <div className="mb-4 sm:mb-6 bg-batik-gold/10 border border-batik-gold/30 rounded-lg p-3 sm:p-4 animate-bounce mx-4 sm:mx-0">
                 <div className="flex items-center justify-center space-x-2 text-batik-brown">
-                  <Hand size={20} />
-                  <span className="font-medium">
+                  <Hand size={16} className="sm:w-5 sm:h-5" />
+                  <span className="font-medium text-sm sm:text-base text-center">
                     {currentStep === 0 &&
                       "Pilih motif di bawah, lalu klik pada kanvas untuk menambah motif batik!"}
                     {currentStep === 1 &&
@@ -599,9 +680,7 @@ const HeroSection = () => {
             >
               {/* Fabric Texture */}
               <div className="absolute inset-0 opacity-20">
-                <div className="bg-[repeating-linear-gradient(90deg,transparent,transparent_2px,rgba(0,0,0,0.1)_2px,rgba(0,0,0,0.1)_4px)]">
-                  {/* konten */}
-                </div>
+                <div className="w-full h-full bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.1)_2px,rgba(0,0,0,0.1)_4px)]"></div>
               </div>
 
               {/* Rendered Motifs */}
@@ -697,7 +776,7 @@ const HeroSection = () => {
             {/* Interactive Controls */}
             <div className="mt-6 space-y-4">
               {/* Process Steps */}
-              <div className="flex justify-center space-x-4">
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-4 px-4 sm:px-0">
                 {steps.map((step, index) => (
                   <button
                     key={index}
@@ -705,14 +784,15 @@ const HeroSection = () => {
                       setCurrentStep(index);
                       setIsDrawing(false);
                     }}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                    className={`px-3 sm:px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm sm:text-base ${
                       currentStep === index
                         ? "bg-batik-gold text-white shadow-lg scale-105"
                         : "bg-white text-batik-brown border border-batik-gold/30 hover:bg-batik-cream"
                     }`}
                   >
-                    <span className="mr-2">{step.icon}</span>
-                    {step.name}
+                    <span className="mr-1 sm:mr-2">{step.icon}</span>
+                    <span className="hidden sm:inline">{step.name}</span>
+                    <span className="sm:hidden">{step.name.slice(0, 4)}</span>
                   </button>
                 ))}
               </div>
@@ -743,7 +823,7 @@ const HeroSection = () => {
                   setWaxLineColor("#DAA520");
                   setColoringTarget("fabric");
                 }}
-                className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 mb-10"
+                className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200"
               >
                 Reset Canvas
               </button>
