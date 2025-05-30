@@ -30,12 +30,12 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Alamat",
-      details: ["Jl. Malioboro No. 123", "Yogyakarta 55271", "Indonesia"],
+      details: ["Pasar Kito Ilir Barat Permai", "Palembang 30131", "Indonesia"],
     },
     {
       icon: Phone,
       title: "Telepon",
-      details: ["+62 21 1234 5678", "+62 812 3456 7890"],
+      details: ["+62 895 2489 3101 ", "+62 882 7672 9787"],
     },
     {
       icon: Mail,
