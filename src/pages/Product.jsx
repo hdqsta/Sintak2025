@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { ExternalLink, Calendar, User } from "lucide-react"
 
-const Portfolio = () => {
+const Product = () => {
   const [activeFilter, setActiveFilter] = useState("all")
 
   const categories = [
@@ -325,7 +325,7 @@ const Portfolio = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-batik-cream to-batik-gold/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-batik-brown mb-6">Portofolio Kami</h1>
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-batik-brown mb-6">Product Kami</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Jelajahi berbagai proyek yang telah kami kerjakan bersama klien-klien terpercaya di berbagai industri.
           </p>
@@ -454,4 +454,4 @@ const Portfolio = () => {
   )
 }
 
-export default Portfolio
+export default Product
