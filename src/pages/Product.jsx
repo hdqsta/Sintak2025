@@ -1,24 +1,14 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import {
-  ExternalLink,
-  Calendar,
-  User,
-  X,
-  ShoppingCart,
-  Heart,
-  Share2,
-  Star,
-  MapPin,
-  Phone,
-  Mail,
-} from "lucide-react";
+import { useState } from "react"
+import { ExternalLink, Calendar, User, X, ShoppingCart, Heart, Share2, Star, MapPin, Phone, Mail } from "lucide-react"
+import { useCart } from "../context/CartContext"
 
 const Product = () => {
-  const [activeFilter, setActiveFilter] = useState("all");
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeFilter, setActiveFilter] = useState("all")
+  const [selectedProduct, setSelectedProduct] = useState(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const { addToCart } = useCart()
 
   const categories = [
     { id: "all", name: "Semua" },
@@ -26,7 +16,7 @@ const Product = () => {
     { id: "kain", name: "Kain Batik" },
     { id: "decor", name: "Dekorasi" },
     { id: "souvenir", name: "Souvenir" },
-  ];
+  ]
 
   const portfolioItems = [
     {
@@ -662,67 +652,58 @@ const Product = () => {
   ];
 
   const filteredItems =
-    activeFilter === "all"
-      ? portfolioItems
-      : portfolioItems.filter((item) => item.category === activeFilter);
+    activeFilter === "all" ? portfolioItems : portfolioItems.filter((item) => item.category === activeFilter)
 
-  // Global function to handle product detail view
   const handleViewDetail = (productId) => {
-    const product = portfolioItems.find((item) => item.id === productId);
+    const product = portfolioItems.find((item) => item.id === productId)
     if (product) {
-      setSelectedProduct(product);
-      setIsModalOpen(true);
+      setSelectedProduct(product)
+      setIsModalOpen(true)
     }
-  };
+  }
 
   const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedProduct(null);
-  };
+    setIsModalOpen(false)
+    setSelectedProduct(null)
+  }
+
+  const handleAddToCart = (product) => {
+    addToCart(product)
+    // Show success message
+    alert(`${product.title} berhasil ditambahkan ke keranjang!`)
+  }
 
   // Function to render star rating
   const renderStars = (rating) => {
-    const stars = [];
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 !== 0;
+    const stars = []
+    const fullStars = Math.floor(rating)
+    const hasHalfStar = rating % 1 !== 0
 
     for (let i = 0; i < fullStars; i++) {
-      stars.push(
-        <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />
-      );
+      stars.push(<Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />)
     }
 
     if (hasHalfStar) {
-      stars.push(
-        <Star
-          key="half"
-          size={16}
-          className="fill-yellow-400/50 text-yellow-400"
-        />
-      );
+      stars.push(<Star key="half" size={16} className="fill-yellow-400/50 text-yellow-400" />)
     }
 
-    const emptyStars = 5 - Math.ceil(rating);
+    const emptyStars = 5 - Math.ceil(rating)
     for (let i = 0; i < emptyStars; i++) {
-      stars.push(
-        <Star key={`empty-${i}`} size={16} className="text-gray-300" />
-      );
+      stars.push(<Star key={`empty-${i}`} size={16} className="text-gray-300" />)
     }
 
-    return stars;
-  };
+    return stars
+  }
 
   return (
     <div className="pt-16">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-batik-cream to-batik-gold/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-batik-brown mb-6">
-            Product Kami
-          </h1>
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-batik-brown mb-6">Product Kami</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Jelajahi berbagai produk batik berkualitas tinggi yang telah kami
-            ciptakan dengan penuh dedikasi dan keahlian.
+            Jelajahi berbagai produk batik berkualitas tinggi yang telah kami ciptakan dengan penuh dedikasi dan
+            keahlian.
           </p>
         </div>
       </section>
@@ -780,22 +761,15 @@ const Product = () => {
                 <div className="p-6">
                   <div className="flex flex-wrap gap-2 mb-3">
                     {item.tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="text-xs bg-batik-cream text-batik-brown px-2 py-1 rounded-full"
-                      >
+                      <span key={index} className="text-xs bg-batik-cream text-batik-brown px-2 py-1 rounded-full">
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <h3 className="font-serif text-xl font-semibold text-batik-brown mb-2">
-                    {item.title}
-                  </h3>
+                  <h3 className="font-serif text-xl font-semibold text-batik-brown mb-2">{item.title}</h3>
 
-                  <p className="text-gray-600 mb-4 text-sm">
-                    {item.description}
-                  </p>
+                  <p className="text-gray-600 mb-4 text-sm">{item.description}</p>
 
                   <div className="space-y-2 text-sm text-gray-500">
                     <div className="flex items-center space-x-2">
@@ -811,12 +785,8 @@ const Product = () => {
                   {/* Rating */}
                   {item.rating && (
                     <div className="flex items-center space-x-2 mt-3">
-                      <div className="flex space-x-1">
-                        {renderStars(item.rating)}
-                      </div>
-                      <span className="text-sm text-gray-500">
-                        ({item.reviews})
-                      </span>
+                      <div className="flex space-x-1">{renderStars(item.rating)}</div>
+                      <span className="text-sm text-gray-500">({item.reviews})</span>
                     </div>
                   )}
                 </div>
@@ -826,19 +796,14 @@ const Product = () => {
         </div>
       </section>
 
-      {/* Product Detail Modal */}
+      {/* Product Detail Modal - New Design */}
       {isModalOpen && selectedProduct && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             {/* Modal Header */}
             <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between rounded-t-2xl">
-              <h2 className="font-serif text-2xl font-bold text-batik-brown">
-                {selectedProduct.title}
-              </h2>
-              <button
-                onClick={closeModal}
-                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
-              >
+              <h2 className="font-serif text-2xl font-bold text-batik-brown">{selectedProduct.title}</h2>
+              <button onClick={closeModal} className="p-2 hover:bg-gray-100 rounded-full transition-colors">
                 <X size={24} className="text-gray-500" />
               </button>
             </div>
@@ -856,7 +821,10 @@ const Product = () => {
 
                   {/* Action Buttons */}
                   <div className="flex space-x-3">
-                    <button className="flex-1 bg-batik-gold text-white py-3 px-4 rounded-lg font-semibold hover:bg-batik-brown transition-colors flex items-center justify-center space-x-2">
+                    <button
+                      onClick={() => handleAddToCart(selectedProduct)}
+                      className="flex-1 bg-batik-gold text-white py-3 px-4 rounded-lg font-semibold hover:bg-batik-brown transition-colors flex items-center justify-center space-x-2"
+                    >
                       <ShoppingCart size={20} />
                       <span>Tambah ke Keranjang</span>
                     </button>
@@ -873,53 +841,35 @@ const Product = () => {
                 <div className="space-y-6">
                   {/* Price and Rating */}
                   <div className="space-y-3">
-                    <div className="text-3xl font-bold text-batik-brown">
-                      {selectedProduct.price}
-                    </div>
+                    <div className="text-3xl font-bold text-batik-brown">{selectedProduct.price}</div>
                     <div className="flex items-center space-x-3">
-                      <div className="flex space-x-1">
-                        {renderStars(selectedProduct.rating)}
-                      </div>
-                      <span className="text-gray-600">
-                        ({selectedProduct.reviews} ulasan)
-                      </span>
+                      <div className="flex space-x-1">{renderStars(selectedProduct.rating)}</div>
+                      <span className="text-gray-600">({selectedProduct.reviews} ulasan)</span>
                     </div>
                   </div>
 
                   {/* Description */}
                   <div>
-                    <h3 className="font-semibold text-batik-brown mb-2">
-                      Deskripsi
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {selectedProduct.detailDescription}
-                    </p>
+                    <h3 className="font-semibold text-batik-brown mb-2">Deskripsi</h3>
+                    <p className="text-gray-600 leading-relaxed">{selectedProduct.detailDescription}</p>
                   </div>
 
                   {/* Specifications */}
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <h4 className="font-semibold text-batik-brown mb-2">
-                        Spesifikasi
-                      </h4>
+                      <h4 className="font-semibold text-batik-brown mb-2">Spesifikasi</h4>
                       <div className="space-y-2 text-sm">
                         <div className="flex justify-between">
                           <span className="text-gray-600">Material:</span>
-                          <span className="font-medium">
-                            {selectedProduct.material}
-                          </span>
+                          <span className="font-medium">{selectedProduct.material}</span>
                         </div>
                         <div className="flex justify-between">
                           <span className="text-gray-600">Ukuran:</span>
-                          <span className="font-medium">
-                            {selectedProduct.size}
-                          </span>
+                          <span className="font-medium">{selectedProduct.size}</span>
                         </div>
                         <div className="flex justify-between">
                           <span className="text-gray-600">Stok:</span>
-                          <span className="font-medium">
-                            {selectedProduct.stock} pcs
-                          </span>
+                          <span className="font-medium">{selectedProduct.stock} pcs</span>
                         </div>
                         <div className="flex justify-between">
                           <span className="text-gray-600">Asal:</span>
@@ -932,15 +882,10 @@ const Product = () => {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-batik-brown mb-2">
-                        Warna Tersedia
-                      </h4>
+                      <h4 className="font-semibold text-batik-brown mb-2">Warna Tersedia</h4>
                       <div className="flex flex-wrap gap-2">
                         {selectedProduct.colors.map((color, index) => (
-                          <span
-                            key={index}
-                            className="px-3 py-1 bg-batik-cream text-batik-brown text-xs rounded-full"
-                          >
+                          <span key={index} className="px-3 py-1 bg-batik-cream text-batik-brown text-xs rounded-full">
                             {color}
                           </span>
                         ))}
@@ -950,25 +895,16 @@ const Product = () => {
 
                   {/* Care Instructions */}
                   <div>
-                    <h4 className="font-semibold text-batik-brown mb-2">
-                      Petunjuk Perawatan
-                    </h4>
-                    <p className="text-gray-600 text-sm">
-                      {selectedProduct.care}
-                    </p>
+                    <h4 className="font-semibold text-batik-brown mb-2">Petunjuk Perawatan</h4>
+                    <p className="text-gray-600 text-sm">{selectedProduct.care}</p>
                   </div>
 
                   {/* Tags */}
                   <div>
-                    <h4 className="font-semibold text-batik-brown mb-2">
-                      Tags
-                    </h4>
+                    <h4 className="font-semibold text-batik-brown mb-2">Tags</h4>
                     <div className="flex flex-wrap gap-2">
                       {selectedProduct.tags.map((tag, index) => (
-                        <span
-                          key={index}
-                          className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
-                        >
+                        <span key={index} className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
                           {tag}
                         </span>
                       ))}
@@ -986,30 +922,22 @@ const Product = () => {
                   <div className="flex items-center space-x-3">
                     <Phone size={20} className="text-batik-gold" />
                     <div>
-                      <div className="font-medium text-batik-brown">
-                        Telepon
-                      </div>
-                      <div className="text-sm text-gray-600">
-                        +62 895-2489-3101
-                      </div>
+                      <div className="font-medium text-batik-brown">Telepon</div>
+                      <div className="text-sm text-gray-600">+62 895-2489-3101</div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Mail size={20} className="text-batik-gold" />
                     <div>
                       <div className="font-medium text-batik-brown">Email</div>
-                      <div className="text-sm text-gray-600">
-                        info@domesa.co
-                      </div>
+                      <div className="text-sm text-gray-600">info@domesa.co</div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
                     <MapPin size={20} className="text-batik-gold" />
                     <div>
                       <div className="font-medium text-batik-brown">Lokasi</div>
-                      <div className="text-sm text-gray-600">
-                        Palembang, Indonesia
-                      </div>
+                      <div className="text-sm text-gray-600">Palembang, Indonesia</div>
                     </div>
                   </div>
                 </div>
@@ -1023,37 +951,25 @@ const Product = () => {
       <section className="py-20 bg-batik-cream/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl font-bold text-batik-brown mb-4">
-              Pencapaian Kami
-            </h2>
-            <p className="text-gray-600">
-              Angka-angka yang menunjukkan dedikasi dan kepercayaan klien
-            </p>
+            <h2 className="font-serif text-3xl font-bold text-batik-brown mb-4">Pencapaian Kami</h2>
+            <p className="text-gray-600">Angka-angka yang menunjukkan dedikasi dan kepercayaan klien</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-serif font-bold text-batik-brown mb-2">
-                150+
-              </div>
+              <div className="text-4xl font-serif font-bold text-batik-brown mb-2">150+</div>
               <div className="text-gray-600">Proyek Selesai</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-serif font-bold text-batik-brown mb-2">
-                50+
-              </div>
+              <div className="text-4xl font-serif font-bold text-batik-brown mb-2">50+</div>
               <div className="text-gray-600">Klien Korporat</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-serif font-bold text-batik-brown mb-2">
-                98%
-              </div>
+              <div className="text-4xl font-serif font-bold text-batik-brown mb-2">98%</div>
               <div className="text-gray-600">Tingkat Kepuasan</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-serif font-bold text-batik-brown mb-2">
-                15+
-              </div>
+              <div className="text-4xl font-serif font-bold text-batik-brown mb-2">15+</div>
               <div className="text-gray-600">Tahun Pengalaman</div>
             </div>
           </div>
@@ -1063,12 +979,9 @@ const Product = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-batik-brown to-batik-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">
-            Tertarik Berkolaborasi?
-          </h2>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">Tertarik Berkolaborasi?</h2>
           <p className="text-xl text-batik-cream mb-8 max-w-3xl mx-auto">
-            Mari wujudkan proyek impian Anda bersama tim profesional kami.
-            Konsultasi gratis untuk semua jenis proyek.
+            Mari wujudkan proyek impian Anda bersama tim profesional kami. Konsultasi gratis untuk semua jenis proyek.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-batik-gold hover:bg-batik-gold/90 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
@@ -1081,7 +994,7 @@ const Product = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default Product;
+export default Product
