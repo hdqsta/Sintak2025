@@ -417,7 +417,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-batik-brown mb-6">
+          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-batik-brown mb-6 mt-12">
             Warisan Budaya
             <span className="block text-batik-gold">Indonesia Modern</span>
           </h1>
@@ -599,7 +599,9 @@ const HeroSection = () => {
             >
               {/* Fabric Texture */}
               <div className="absolute inset-0 opacity-20">
-                <div className="w-full h-full bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.1)_2px,rgba(0,0,0,0.1)_4px)] bg-[repeating-linear-gradient(90deg,transparent,transparent_2px,rgba(0,0,0,0.1)_2px,rgba(0,0,0,0.1)_4px)]"></div>
+                <div className="bg-[repeating-linear-gradient(90deg,transparent,transparent_2px,rgba(0,0,0,0.1)_2px,rgba(0,0,0,0.1)_4px)]">
+                  {/* konten */}
+                </div>
               </div>
 
               {/* Rendered Motifs */}
@@ -741,7 +743,7 @@ const HeroSection = () => {
                   setWaxLineColor("#DAA520");
                   setColoringTarget("fabric");
                 }}
-                className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200"
+                className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 mb-10"
               >
                 Reset Canvas
               </button>

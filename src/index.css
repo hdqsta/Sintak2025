@@ -410,7 +410,21 @@
     opacity: 1;
   }
 }
-
+.navbar-background {
+  background-image: linear-gradient(
+      to right,
+      white 0%,
+      rgba(255, 255, 255, 0.7) 20%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0.7) 80%,
+      white 100%
+    ),
+    url("/home-pages/navbar/batik-motif.webp"),
+    url("/home-pages/navbar/batik-motif.webp");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 200px 100%, 200px 100%, 200px 100%;
+  background-position: left center, right center, left center;
+}
 @keyframes dyeSplash {
   0% {
     transform: scale(0);
