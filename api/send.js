@@ -1,3 +1,4 @@
+// /api/send.js
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
@@ -10,8 +11,8 @@ export default async function handler(req, res) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      GMAIL_USER: "domesabatiknusantara@gmail.com",
-      GMAIL_PASS: "fhnf atwf yyge zlpt",
+      user: process.env.GMAIL_USER,
+      pass: process.env.GMAIL_PASS,
     },
   });
 
@@ -23,9 +24,11 @@ export default async function handler(req, res) {
       text: message,
     });
 
-    return res.status(200).json({ message: "Email terkirim!" });
+    return res.status(200).json({ success: true, message: "Email terkirim!" });
   } catch (error) {
     console.error("Gagal kirim email:", error);
-    return res.status(500).json({ message: "Gagal mengirim email." });
+    return res
+      .status(500)
+      .json({ success: false, message: "Gagal mengirim email." });
   }
 }
