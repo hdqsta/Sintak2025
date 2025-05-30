@@ -11,7 +11,8 @@ const Navbar = () => {
   const navigation = [
     { name: "Beranda", href: "/" },
     { name: "Tentang Kami", href: "/about" },
-    { name: "Portofolio", href: "/portfolio" },
+    { name: "Layanan", href: "/services" },
+    { name: "Product", href: "/product" },
     { name: "Testimoni", href: "/testimonials" },
     { name: "Blog", href: "/blog" },
     { name: "FAQ", href: "/faq" },
