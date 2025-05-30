@@ -208,12 +208,12 @@ const Testimonials = () => {
             Bergabunglah dengan Klien Puas Kami
           </h2>
           <p className="text-xl text-batik-cream mb-8 max-w-3xl mx-auto">
-            Ratusan klien telah mempercayakan proyek mereka kepada kami. Saatnya giliran Anda merasakan pengalaman yang
+            Ratusan klien telah puas terhadap pelayanan kami. Saatnya giliran Anda merasakan pengalaman yang
             luar biasa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-batik-gold hover:bg-batik-gold/90 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
-              Mulai Proyek Anda
+              Tampilkan Product
             </button>
             <button className="border-2 border-white text-white hover:bg-white hover:text-batik-brown font-semibold py-4 px-8 rounded-lg transition-all duration-300">
               Konsultasi Gratis

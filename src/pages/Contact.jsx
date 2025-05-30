@@ -175,7 +175,7 @@ const Contact = () => {
                 <div className="text-center text-batik-brown">
                   <MapPin size={48} className="mx-auto mb-2" />
                   <p className="font-medium">Peta Lokasi</p>
-                  <p className="text-sm">Pasar Kitu Ilir Barat Permai, Palembang</p>
+                  <p className="text-sm">Pasar Kito Ilir Barat Permai, Palembang</p>
                 </div>
               </div>
 

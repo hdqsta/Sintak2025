@@ -66,20 +66,9 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <button className="btn-primary">Lihat Semua Produk</button>
-        </div>
       </div>
     </section>
   )
 }
-
-            <Link
-              to="/portfolio"
-              className="btn-primary inline-flex items-center"
-            >
-              Jelajahi Produk
-              <ArrowRight className="ml-2" size={20} />
-            </Link>
 
 export default ServicesSection

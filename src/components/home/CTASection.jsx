@@ -27,10 +27,10 @@ const CTASection = () => {
           </Link>
 
           <Link
-            to="/portfolio"
+            to="/product"
             className="border-2 border-white text-white hover:bg-white hover:text-batik-brown font-semibold py-4 px-8 rounded-lg transition-all duration-300"
           >
-            Lihat Portfolio
+            Lihat Product
           </Link>
         </div>
 

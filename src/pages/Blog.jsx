@@ -175,21 +175,6 @@ const Blog = () => {
                     </li>
                   ))}
                 </ul>
-
-                <div className="mt-8 pt-6 border-t">
-                  <h4 className="font-serif text-lg font-semibold text-batik-brown mb-4">Newsletter</h4>
-                  <p className="text-gray-600 text-sm mb-4">Dapatkan artikel terbaru langsung di email Anda</p>
-                  <div className="space-y-3">
-                    <input
-                      type="email"
-                      placeholder="Email Anda"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-batik-gold focus:border-transparent text-sm"
-                    />
-                    <button className="w-full bg-batik-gold text-white py-2 px-4 rounded-lg hover:bg-batik-brown transition-colors duration-300 text-sm">
-                      Berlangganan
-                    </button>
-                  </div>
-                </div>
               </div>
             </div>
 
