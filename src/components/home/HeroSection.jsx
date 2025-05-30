@@ -433,7 +433,7 @@ const HeroSection = () => {
             style={{ animationDelay: "0.3s" }}
           >
             <Link
-              to="/services"
+              to="/portfolio"
               className="btn-primary inline-flex items-center"
             >
               Jelajahi Produk

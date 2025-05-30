@@ -18,7 +18,7 @@ const FAQ = () => {
         {
           question: "Apa itu Domesa.co?",
           answer:
-            "Batik Nusantara adalah perusahaan yang bergerak di bidang handycraft Indonesia, khususnya batik dan produk budaya tradisional dengan sentuhan modern. Kami didirikan pada tahun 2009 dengan misi melestarikan warisan budaya Indonesia melalui inovasi dan kualitas tinggi.",
+            " adalah perusahaan yang bergerak di bidang handycraft Indonesia, khususnya batik dan produk budaya tradisional dengan sentuhan modern. Kami didirikan pada tahun 2009 dengan misi melestarikan warisan budaya Indonesia melalui inovasi dan kualitas tinggi.",
         },
         {
           question: "Di mana lokasi workshop dan showroom Batik Nusantara?",
