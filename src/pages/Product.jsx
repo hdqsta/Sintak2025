@@ -143,7 +143,7 @@ const Product = () => {
       year: "2023",
       description: "Desain batik yang terinspirasi dari Bali.",
       image: "/portfolio/BatikBalian.jpg",
-      tags: ["Fashion", "Batik"],
+      tags: ["Kain", "Batik"],
     },
     {
       id: 14,
@@ -153,7 +153,7 @@ const Product = () => {
       year: "2023",
       description: "Koleksi batik dengan motif Kawung.",
       image: "/portfolio/BatikKawung.webp",
-      tags: ["Fashion", "Batik"],
+      tags: ["Kain", "Batik"],
     },
     {
       id: 15,
@@ -163,7 +163,7 @@ const Product = () => {
       year: "2023",
       description: "Desain batik Mega Mendung yang khas.",
       image: "/portfolio/BatikMegaMendung.webp",
-      tags: ["Fashion", "Batik"],
+      tags: ["Kain", "Batik"],
     },
     {
       id: 16,
@@ -173,7 +173,7 @@ const Product = () => {
       year: "2023",
       description: "Koleksi batik dengan motif Parang.",
       image: "/portfolio/BatikParang.jpeg",
-      tags: ["Fashion", "Batik"],
+      tags: ["Kain", "Batik"],
     },
     {
       id: 17,
@@ -183,7 +183,7 @@ const Product = () => {
       year: "2023",
       description: "Desain batik Parangg yang unik.",
       image: "/portfolio/BatikParangg.jpg",
-      tags: ["Fashion", "Batik"],
+      tags: ["Kain", "Batik"],
     },
     {
       id: 18,
@@ -193,7 +193,7 @@ const Product = () => {
       year: "2023",
       description: "Koleksi batik Solo Truntum yang elegan.",
       image: "/portfolio/BatikSoloTruntum1.jpg",
-      tags: ["Fashion", "Batik"],
+      tags: ["Kain", "Batik"],
     },
     {
       id: 19,
@@ -203,7 +203,7 @@ const Product = () => {
       year: "2023",
       description: "Dekorasi batik yang indah.",
       image: "/portfolio/DekorasiBatik1.jpg",
-      tags: ["Kain", "Batik"],
+      tags: ["Dekorasi", "Batik"],
     },
     {
       id: 20,
@@ -213,7 +213,7 @@ const Product = () => {
       year: "2023",
       description: "Dekorasi dinding dengan motif batik.",
       image: "/portfolio/DekorDinding.jpg",
-      tags: ["Kain", "Batik"],
+      tags: ["Dekorasi", "Batik"],
     },
     {
       id: 21,
@@ -223,7 +223,7 @@ const Product = () => {
       year: "2023",
       description: "Hiasan dinding yang menarik.",
       image: "/portfolio/HiasanDinding3.jpg",
-      tags: ["Kain", "Batik"],
+      tags: ["Dekorasi", "Batik"],
     },
     {
       id: 22,
