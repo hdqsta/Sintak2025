@@ -12,7 +12,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-batik-gold rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">B</span>
               </div>
-              <span className="font-serif text-xl font-bold">Batik Nusantara</span>
+              <span className="font-serif text-xl font-bold">Domesa.co</span>
             </div>
             <p className="text-batik-cream mb-4 max-w-md">
               Melestarikan warisan budaya Indonesia melalui produk handycraft berkualitas tinggi dengan sentuhan modern
@@ -69,11 +69,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center space-x-2">
                 <MapPin size={16} className="text-batik-gold" />
-                <span className="text-batik-cream text-sm">Jakarta, Indonesia</span>
+                <span className="text-batik-cream text-sm">Palembang, Indonesia</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone size={16} className="text-batik-gold" />
-                <span className="text-batik-cream text-sm">+62 21 1234 5678</span>
+                <span className="text-batik-cream text-sm">+62 895-2489-3101</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail size={16} className="text-batik-gold" />

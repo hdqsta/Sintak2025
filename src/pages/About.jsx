@@ -3,22 +3,22 @@ import { Users, Target, Eye, Award } from "lucide-react"
 const About = () => {
   const team = [
     {
-      name: "Sari Dewi",
+      name: "M. Hatta Siddiq",
       role: "Founder & CEO",
       description: "Pengalaman 20 tahun di industri batik dan fashion",
     },
     {
-      name: "Budi Hartono",
+      name: "Evania Loveola",
       role: "Creative Director",
       description: "Desainer senior dengan spesialisasi motif tradisional",
     },
     {
-      name: "Maya Sari",
+      name: "Aidilya Laila Andhini",
       role: "Production Manager",
       description: "Ahli dalam manajemen produksi dan quality control",
     },
     {
-      name: "Andi Wijaya",
+      name: "Eka Rahayu",
       role: "Marketing Director",
       description: "Strategi pemasaran dan pengembangan bisnis",
     },
@@ -29,7 +29,7 @@ const About = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-batik-cream to-batik-gold/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-batik-brown mb-6">Tentang Batik Nusantara</h1>
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-batik-brown mb-6">Tentang Domesa.co</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Perjalanan kami dalam melestarikan warisan budaya Indonesia melalui inovasi dan dedikasi yang tak pernah
             surut.
@@ -44,16 +44,16 @@ const About = () => {
             <div>
               <h2 className="font-serif text-3xl font-bold text-batik-brown mb-6">Cerita Kami</h2>
               <p className="text-gray-600 mb-6">
-                Batik Nusantara didirikan pada tahun 2009 dengan visi sederhana namun mulia: melestarikan keindahan
-                batik Indonesia sambil menghadirkan inovasi yang relevan dengan zaman modern.
+               Usaha ini lahir dari semangat untuk mengenalkan keindahan dan nilai budaya Indonesia melalui kerajinan batik khas dari 
+               berbagai daerah. Kami percaya bahwa setiap karya tangan memiliki cerita, filosofi, dan identitas yang layak dikenal dunia.
               </p>
               <p className="text-gray-600 mb-6">
-                Berawal dari workshop kecil di Yogyakarta, kami kini telah berkembang menjadi perusahaan terpercaya yang
-                melayani klien di seluruh Indonesia dan mancanegara.
+                Berawal dari inisiatif kecil untuk memberdayakan pengrajin lokal, kini kami membangun platform digital yang menjembatani antara 
+                pelaku UMKM kerajinan dan konsumen, baik di dalam negeri maupun mancanegara.
               </p>
               <p className="text-gray-600">
-                Setiap produk yang kami hasilkan merupakan hasil kolaborasi antara pengrajin tradisional dan desainer
-                kontemporer, menciptakan harmoni sempurna antara warisan budaya dan tren modern.
+                Setiap produk yang kami pasarkan adalah hasil karya autentik, penuh makna, dan dibuat dengan sentuhan tradisional. 
+                Melalui usaha ini, kami ingin merayakan warisan budaya sambil menciptakan peluang baru di era modern.
               </p>
             </div>
 
@@ -82,7 +82,7 @@ const About = () => {
               </div>
               <h3 className="font-serif text-2xl font-bold text-batik-brown mb-4">Visi</h3>
               <p className="text-gray-600">
-                Menjadi perusahaan handycraft terdepan yang melestarikan budaya Indonesia melalui inovasi berkelanjutan.
+                Menjadi jembatan antara pengrajin lokal dan pasar global untuk melestarikan budaya melalui kerajinan tangan Indonesia.
               </p>
             </div>
 
@@ -92,7 +92,7 @@ const About = () => {
               </div>
               <h3 className="font-serif text-2xl font-bold text-batik-brown mb-4">Misi</h3>
               <p className="text-gray-600">
-                Menghadirkan produk berkualitas tinggi yang memadukan tradisi dengan desain modern untuk pasar global.
+                Mempromosikan produk kerajinan asli Indonesia dengan platform digital yang mendukung kualitas, keaslian, dan kesejahteraan pengrajin.
               </p>
             </div>
 
@@ -102,7 +102,7 @@ const About = () => {
               </div>
               <h3 className="font-serif text-2xl font-bold text-batik-brown mb-4">Nilai</h3>
               <p className="text-gray-600">
-                Integritas, kualitas, inovasi, dan komitmen terhadap pelestarian budaya Indonesia.
+                Kami menjunjung tinggi keaslian, budaya, kualitas, pemberdayaan, dan inovasi dalam setiap langkah usaha kami.
               </p>
             </div>
           </div>

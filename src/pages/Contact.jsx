@@ -30,12 +30,12 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Alamat",
-      details: ["Jl. Malioboro No. 123", "Yogyakarta 55271", "Indonesia"],
+      details: ["Pasar Kito Ilir Barat Permai", "Palembang 30131", "Indonesia"],
     },
     {
       icon: Phone,
       title: "Telepon",
-      details: ["+62 21 1234 5678", "+62 812 3456 7890"],
+      details: ["+62 895 2489 3101 ", "+62 882 7672 9787"],
     },
     {
       icon: Mail,
@@ -175,7 +175,7 @@ const Contact = () => {
                 <div className="text-center text-batik-brown">
                   <MapPin size={48} className="mx-auto mb-2" />
                   <p className="font-medium">Peta Lokasi</p>
-                  <p className="text-sm">Jl. Malioboro No. 123, Yogyakarta</p>
+                  <p className="text-sm">Pasar Kitu Ilir Barat Permai, Palembang</p>
                 </div>
               </div>
 
