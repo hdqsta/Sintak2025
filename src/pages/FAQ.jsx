@@ -1,29 +1,40 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { ChevronDown, ChevronUp, Search, MessageCircle, Phone, Mail } from "lucide-react"
+import { useState } from "react";
+import {
+  ChevronDown,
+  ChevronUp,
+  Search,
+  MessageCircle,
+  Phone,
+  Mail,
+} from "lucide-react";
 
 const FAQ = () => {
-  const [openItems, setOpenItems] = useState([0])
-  const [searchTerm, setSearchTerm] = useState("")
+  const [openItems, setOpenItems] = useState([0]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const toggleItem = (index) => {
-    setOpenItems((prev) => (prev.includes(index) ? prev.filter((item) => item !== index) : [...prev, index]))
-  }
+    setOpenItems((prev) =>
+      prev.includes(index)
+        ? prev.filter((item) => item !== index)
+        : [...prev, index]
+    );
+  };
 
   const faqCategories = [
     {
       title: "Umum",
       faqs: [
         {
-          question: "Apa itu Domesa.co?",
+          question: "Apa itu Batik Nusantara?",
           answer:
-            " adalah perusahaan yang bergerak di bidang handycraft Indonesia, khususnya batik dan produk budaya tradisional dengan sentuhan modern. Kami didirikan pada tahun 2009 dengan misi melestarikan warisan budaya Indonesia melalui inovasi dan kualitas tinggi.",
+            "Batik Nusantara adalah perusahaan yang bergerak di bidang handycraft Indonesia, khususnya batik dan produk budaya tradisional dengan sentuhan modern. Kami didirikan pada tahun 2009 dengan misi melestarikan warisan budaya Indonesia melalui inovasi dan kualitas tinggi.",
         },
         {
           question: "Di mana lokasi workshop dan showroom Batik Nusantara?",
           answer:
-            "Workshop utama kami berlokasi di Palembang, tepatnya di Pasar Kito Tradisional Kompleks Ilir Barat Permai . Untuk kunjungan, mohon hubungi kami terlebih dahulu untuk membuat janji.",
+            "Workshop utama kami berlokasi di Yogyakarta, tepatnya di Jl. Malioboro No. 123. Kami juga memiliki showroom di Jakarta dan Surabaya. Untuk kunjungan, mohon hubungi kami terlebih dahulu untuk membuat janji.",
         },
         {
           question: "Apakah produk Batik Nusantara menggunakan bahan alami?",
@@ -102,40 +113,44 @@ const FAQ = () => {
         },
       ],
     },
-  ]
+  ];
 
   const allFaqs = faqCategories.flatMap((category) =>
-    category.faqs.map((faq) => ({ ...faq, category: category.title })),
-  )
+    category.faqs.map((faq) => ({ ...faq, category: category.title }))
+  );
 
   const filteredFaqs = allFaqs.filter(
     (faq) =>
       faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      faq.answer.toLowerCase().includes(searchTerm.toLowerCase()),
-  )
+      faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-batik-cream to-batik-gold/20">
+      <section className="py-20 bg-gradient-to-br from-batik-cream to-batik-gold/20 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-batik-brown mb-6">
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-batik-brown dark:text-batik-gold mb-6">
             Frequently Asked Questions
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Temukan jawaban untuk pertanyaan yang sering diajukan seputar produk dan layanan Batik Nusantara.
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+            Temukan jawaban untuk pertanyaan yang sering diajukan seputar produk
+            dan layanan Batik Nusantara.
           </p>
 
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto relative">
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+              <Search
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"
+                size={20}
+              />
               <input
                 type="text"
                 placeholder="Cari pertanyaan..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-batik-gold focus:border-transparent text-lg"
+                className="w-full pl-12 pr-4 py-4 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-xl focus:ring-2 focus:ring-batik-gold focus:border-transparent text-lg"
               />
             </div>
           </div>
@@ -143,24 +158,31 @@ const FAQ = () => {
       </section>
 
       {/* FAQ Content */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {searchTerm ? (
             // Search Results
             <div>
-              <h2 className="font-serif text-2xl font-bold text-batik-brown mb-8">
+              <h2 className="font-serif text-2xl font-bold text-batik-brown dark:text-batik-gold mb-8">
                 Hasil Pencarian "{searchTerm}" ({filteredFaqs.length} hasil)
               </h2>
               <div className="space-y-4">
                 {filteredFaqs.map((faq, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg">
+                  <div
+                    key={index}
+                    className="border border-gray-200 dark:border-gray-700 rounded-lg"
+                  >
                     <button
                       onClick={() => toggleItem(index)}
-                      className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                      className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
                     >
                       <div>
-                        <h3 className="font-semibold text-batik-brown">{faq.question}</h3>
-                        <span className="text-sm text-batik-gold">{faq.category}</span>
+                        <h3 className="font-semibold text-batik-brown dark:text-batik-gold">
+                          {faq.question}
+                        </h3>
+                        <span className="text-sm text-batik-gold">
+                          {faq.category}
+                        </span>
                       </div>
                       {openItems.includes(index) ? (
                         <ChevronUp className="text-batik-gold" size={20} />
@@ -170,7 +192,9 @@ const FAQ = () => {
                     </button>
                     {openItems.includes(index) && (
                       <div className="px-6 pb-4">
-                        <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                          {faq.answer}
+                        </p>
                       </div>
                     )}
                   </div>
@@ -182,30 +206,45 @@ const FAQ = () => {
             <div className="space-y-12">
               {faqCategories.map((category, categoryIndex) => (
                 <div key={categoryIndex}>
-                  <h2 className="font-serif text-2xl font-bold text-batik-brown mb-6">{category.title}</h2>
+                  <h2 className="font-serif text-2xl font-bold text-batik-brown dark:text-batik-gold mb-6">
+                    {category.title}
+                  </h2>
                   <div className="space-y-4">
                     {category.faqs.map((faq, faqIndex) => {
-                      const globalIndex = categoryIndex * 10 + faqIndex
+                      const globalIndex = categoryIndex * 10 + faqIndex;
                       return (
-                        <div key={faqIndex} className="border border-gray-200 rounded-lg">
+                        <div
+                          key={faqIndex}
+                          className="border border-gray-200 dark:border-gray-700 rounded-lg"
+                        >
                           <button
                             onClick={() => toggleItem(globalIndex)}
-                            className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                            className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
                           >
-                            <h3 className="font-semibold text-batik-brown">{faq.question}</h3>
+                            <h3 className="font-semibold text-batik-brown dark:text-batik-gold">
+                              {faq.question}
+                            </h3>
                             {openItems.includes(globalIndex) ? (
-                              <ChevronUp className="text-batik-gold" size={20} />
+                              <ChevronUp
+                                className="text-batik-gold"
+                                size={20}
+                              />
                             ) : (
-                              <ChevronDown className="text-batik-gold" size={20} />
+                              <ChevronDown
+                                className="text-batik-gold"
+                                size={20}
+                              />
                             )}
                           </button>
                           {openItems.includes(globalIndex) && (
                             <div className="px-6 pb-4">
-                              <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                {faq.answer}
+                              </p>
                             </div>
                           )}
                         </div>
-                      )
+                      );
                     })}
                   </div>
                 </div>
@@ -216,12 +255,15 @@ const FAQ = () => {
       </section>
 
       {/* Contact Support */}
-      <section className="py-20 bg-batik-cream/30">
+      <section className="py-20 bg-batik-cream/30 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl font-bold text-batik-brown mb-4">Tidak Menemukan Jawaban?</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Tim customer service kami siap membantu Anda dengan pertanyaan atau kebutuhan khusus lainnya.
+            <h2 className="font-serif text-3xl font-bold text-batik-brown dark:text-batik-gold mb-4">
+              Tidak Menemukan Jawaban?
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Tim customer service kami siap membantu Anda dengan pertanyaan
+              atau kebutuhan khusus lainnya.
             </p>
           </div>
 
@@ -230,8 +272,12 @@ const FAQ = () => {
               <div className="w-16 h-16 bg-batik-gold rounded-full flex items-center justify-center mx-auto mb-4">
                 <MessageCircle className="text-white" size={24} />
               </div>
-              <h3 className="font-serif text-xl font-semibold text-batik-brown mb-2">Live Chat</h3>
-              <p className="text-gray-600 mb-4">Chat langsung dengan tim support kami</p>
+              <h3 className="font-serif text-xl font-semibold text-batik-brown dark:text-batik-gold mb-2">
+                Live Chat
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                Chat langsung dengan tim support kami
+              </p>
               <button className="btn-primary">Mulai Chat</button>
             </div>
 
@@ -239,25 +285,33 @@ const FAQ = () => {
               <div className="w-16 h-16 bg-batik-brown rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="text-white" size={24} />
               </div>
-              <h3 className="font-serif text-xl font-semibold text-batik-brown mb-2">Telepon</h3>
-              <p className="text-gray-600 mb-4">Hubungi hotline customer service kami</p>
-              <button className="btn-primary">+62 895-2489-3101</button>
+              <h3 className="font-serif text-xl font-semibold text-batik-brown dark:text-batik-gold mb-2">
+                Telepon
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                Hubungi hotline customer service kami
+              </p>
+              <button className="btn-primary">+62 21 1234 5678</button>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-batik-maroon rounded-full flex items-center justify-center mx-auto mb-4">
                 <Mail className="text-white" size={24} />
               </div>
-              <h3 className="font-serif text-xl font-semibold text-batik-brown mb-2">Email</h3>
-              <p className="text-gray-600 mb-4">Kirim pertanyaan detail via email</p>
+              <h3 className="font-serif text-xl font-semibold text-batik-brown dark:text-batik-gold mb-2">
+                Email
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                Kirim pertanyaan detail via email
+              </p>
               <button className="btn-primary">info@batiknusantara.com</button>
             </div>
           </div>
 
           {/* Quick Contact Form */}
           <div className="mt-16 max-w-2xl mx-auto">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="font-serif text-2xl font-bold text-batik-brown mb-6 text-center">
+            <div className="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-8">
+              <h3 className="font-serif text-2xl font-bold text-batik-brown dark:text-batik-gold mb-6 text-center">
                 Kirim Pertanyaan Cepat
               </h3>
               <form className="space-y-4">
@@ -265,23 +319,23 @@ const FAQ = () => {
                   <input
                     type="text"
                     placeholder="Nama Anda"
-                    className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-batik-gold focus:border-transparent"
+                    className="px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-batik-gold focus:border-transparent"
                   />
                   <input
                     type="email"
                     placeholder="Email Anda"
-                    className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-batik-gold focus:border-transparent"
+                    className="px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-batik-gold focus:border-transparent"
                   />
                 </div>
                 <input
                   type="text"
                   placeholder="Subjek Pertanyaan"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-batik-gold focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-batik-gold focus:border-transparent"
                 />
                 <textarea
                   rows={4}
                   placeholder="Pertanyaan Anda..."
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-batik-gold focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-batik-gold focus:border-transparent"
                 ></textarea>
                 <button type="submit" className="w-full btn-primary">
                   Kirim Pertanyaan
@@ -292,7 +346,7 @@ const FAQ = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default FAQ
+export default FAQ;

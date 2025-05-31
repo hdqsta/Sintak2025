@@ -1,15 +1,23 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { Menu, X, ShoppingCart } from "lucide-react"
-import { useCart } from "../context/CartContext"
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, ShoppingCart, Sun, Moon } from "lucide-react";
+import { useCart } from "../context/CartContext";
+import { useTheme } from "../context/ThemeContext";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isCartOpen, setIsCartOpen] = useState(false)
-  const location = useLocation()
-  const { cartItems, updateQuantity, removeFromCart, getTotalItems, getTotalPrice } = useCart()
+  const [isOpen, setIsOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const location = useLocation();
+  const {
+    cartItems,
+    updateQuantity,
+    removeFromCart,
+    getTotalItems,
+    getTotalPrice,
+  } = useCart();
+  const { theme, toggleTheme } = useTheme();
 
   const navigation = [
     { name: "Beranda", href: "/" },
@@ -20,25 +28,25 @@ const Navbar = () => {
     { name: "Blog", href: "/blog" },
     { name: "FAQ", href: "/faq" },
     { name: "Kontak", href: "/contact" },
-  ]
+  ];
 
   const toggleCart = () => {
-    setIsCartOpen(!isCartOpen)
-  }
+    setIsCartOpen(!isCartOpen);
+  };
 
   const closeCart = () => {
-    setIsCartOpen(false)
-  }
+    setIsCartOpen(false);
+  };
 
   const formatPrice = (price) => {
     return new Intl.NumberFormat("id-ID", {
       style: "currency",
       currency: "IDR",
-    }).format(price)
-  }
+    }).format(price);
+  };
 
   return (
-    <nav className="shadow-lg sticky top-0 z-50 bg-white overflow-hidden">
+    <nav className="shadow-lg sticky top-0 z-50 bg-white dark:bg-gray-900 overflow-hidden">
       <div className="absolute left-0 top-0 h-full w-48 z-0">
         <img
           src="/home-pages/navbar/batik-motif.webp"
@@ -67,9 +75,11 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-batik-gold rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">B</span>
+                <span className="text-white font-bold text-xl">D</span>
               </div>
-              <span className="font-serif text-xl font-bold text-batik-brown">Domesa.co</span>
+              <span className="font-serif text-xl font-bold text-batik-brown">
+                Domesa.co
+              </span>
             </Link>
           </div>
 
@@ -103,6 +113,21 @@ const Navbar = () => {
               )}
             </button>
           </div>
+          {/* Theme Toggle Button */}
+          <button
+            onClick={toggleTheme}
+            className="ml-4 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? (
+              <Sun size={20} className="text-batik-gold" />
+            ) : (
+              <Moon
+                size={20}
+                className="text-batik-brown dark:text-batik-gold"
+              />
+            )}
+          </button>
 
           {/* Mobile menu button and cart icon */}
           <div className="md:hidden flex items-center space-x-4">
@@ -119,7 +144,10 @@ const Navbar = () => {
               )}
             </button>
 
-            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700 hover:text-batik-brown">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700 hover:text-batik-brown"
+            >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -129,21 +157,41 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden relative z-10">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-900 border-t dark:border-gray-700">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
                 className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
                   location.pathname === item.href
-                    ? "text-batik-gold bg-batik-cream"
-                    : "text-gray-700 hover:text-batik-brown hover:bg-gray-50"
+                    ? "text-batik-gold bg-batik-cream dark:bg-batik-brown/20"
+                    : "text-gray-700 dark:text-gray-300 hover:text-batik-brown dark:hover:text-batik-gold hover:bg-gray-50 dark:hover:bg-gray-800"
                 }`}
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
+            {/* Theme Toggle in Mobile Menu */}
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                toggleTheme();
+              }}
+              className="flex w-full items-center px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-batik-brown dark:hover:text-batik-gold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
+            >
+              {theme === "dark" ? (
+                <>
+                  <Sun size={20} className="mr-2" />
+                  Mode Terang
+                </>
+              ) : (
+                <>
+                  <Moon size={20} className="mr-2" />
+                  Mode Gelap
+                </>
+              )}
+            </button>
           </div>
         </div>
       )}
@@ -154,8 +202,13 @@ const Navbar = () => {
           <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             {/* Modal Header */}
             <div className="sticky top-0 bg-white border-b border-gray-200 p-4 flex items-center justify-between rounded-t-2xl">
-              <h2 className="font-serif text-xl font-bold text-batik-brown">Keranjang Belanja</h2>
-              <button onClick={closeCart} className="p-2 hover:bg-gray-100 rounded-full transition-colors">
+              <h2 className="font-serif text-xl font-bold text-batik-brown">
+                Keranjang Belanja
+              </h2>
+              <button
+                onClick={closeCart}
+                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+              >
                 <X size={20} className="text-gray-500" />
               </button>
             </div>
@@ -164,7 +217,10 @@ const Navbar = () => {
             <div className="p-6">
               {cartItems.length === 0 ? (
                 <div className="text-center py-10">
-                  <ShoppingCart size={64} className="mx-auto text-gray-400 mb-4" />
+                  <ShoppingCart
+                    size={64}
+                    className="mx-auto text-gray-400 mb-4"
+                  />
                   <p className="text-gray-500">Keranjang belanja Anda kosong</p>
                 </div>
               ) : (
@@ -172,7 +228,10 @@ const Navbar = () => {
                   {/* Cart Items */}
                   <div className="space-y-4 mb-6">
                     {cartItems.map((item) => (
-                      <div key={item.id} className="flex items-center space-x-4 p-4 border border-gray-200 rounded-lg">
+                      <div
+                        key={item.id}
+                        className="flex items-center space-x-4 p-4 border border-gray-200 rounded-lg"
+                      >
                         <div className="flex-shrink-0 w-20 h-20 border border-gray-200 rounded-md overflow-hidden">
                           <img
                             src={item.image || "/placeholder.svg"}
@@ -182,22 +241,34 @@ const Navbar = () => {
                         </div>
 
                         <div className="flex-1">
-                          <h3 className="font-semibold text-batik-brown">{item.title}</h3>
-                          <p className="text-sm text-gray-500">{item.material}</p>
-                          <p className="text-sm font-medium text-batik-gold">{item.price}</p>
+                          <h3 className="font-semibold text-batik-brown">
+                            {item.title}
+                          </h3>
+                          <p className="text-sm text-gray-500">
+                            {item.material}
+                          </p>
+                          <p className="text-sm font-medium text-batik-gold">
+                            {item.price}
+                          </p>
                         </div>
 
                         <div className="flex items-center space-x-2">
                           <button
                             className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-md text-gray-600 hover:text-batik-gold"
-                            onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                            onClick={() =>
+                              updateQuantity(item.id, item.quantity - 1)
+                            }
                           >
                             -
                           </button>
-                          <span className="w-8 text-center">{item.quantity}</span>
+                          <span className="w-8 text-center">
+                            {item.quantity}
+                          </span>
                           <button
                             className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-md text-gray-600 hover:text-batik-gold"
-                            onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                            onClick={() =>
+                              updateQuantity(item.id, item.quantity + 1)
+                            }
                           >
                             +
                           </button>
@@ -220,7 +291,9 @@ const Navbar = () => {
                       <span>Total:</span>
                       <span>{formatPrice(getTotalPrice())}</span>
                     </div>
-                    <p className="text-sm text-gray-500 mt-1">Pengiriman dan pajak dihitung saat checkout.</p>
+                    <p className="text-sm text-gray-500 mt-1">
+                      Pengiriman dan pajak dihitung saat checkout.
+                    </p>
                   </div>
 
                   {/* Checkout Button */}
@@ -247,7 +320,7 @@ const Navbar = () => {
         </div>
       )}
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

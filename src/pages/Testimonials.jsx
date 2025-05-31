@@ -1,4 +1,4 @@
-import { Star, Quote, Building, Calendar } from "lucide-react"
+import { Star, Quote, Building, Calendar } from "lucide-react";
 
 const Testimonials = () => {
   const testimonials = [
@@ -74,24 +74,26 @@ const Testimonials = () => {
       date: "Ongoing",
       image: "/testimonials/profil12.jpg?height=60&width=60",
     },
-  ]
+  ];
 
   const stats = [
     { number: "1000+", label: "Klien Puas" },
     { number: "98%", label: "Tingkat Kepuasan" },
     { number: "4.9/5", label: "Rating Rata-rata" },
     { number: "500+", label: "Review Positif" },
-  ]
+  ];
 
   return (
     <div className="pt-16">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-batik-cream to-batik-gold/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-batik-brown mb-6">Testimoni Klien</h1>
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-batik-brown mb-6">
+            Testimoni Klien
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Kepuasan klien adalah kebanggaan kami. Simak pengalaman mereka yang telah mempercayakan proyek handycraft
-            kepada kami.
+            Kepuasan klien adalah kebanggaan kami. Simak pengalaman mereka yang
+            telah mempercayakan proyek handycraft kepada kami.
           </p>
         </div>
       </section>
@@ -102,7 +104,9 @@ const Testimonials = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
               <div key={index}>
-                <div className="text-3xl md:text-4xl font-serif font-bold text-batik-brown mb-2">{stat.number}</div>
+                <div className="text-3xl md:text-4xl font-serif font-bold text-batik-brown mb-2">
+                  {stat.number}
+                </div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>
             ))}
@@ -127,12 +131,17 @@ const Testimonials = () => {
                 {/* Rating */}
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-batik-gold fill-current" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-batik-gold fill-current"
+                    />
                   ))}
                 </div>
 
                 {/* Content */}
-                <p className="text-gray-600 mb-6 italic leading-relaxed">"{testimonial.content}"</p>
+                <p className="text-gray-600 mb-6 italic leading-relaxed">
+                  "{testimonial.content}"
+                </p>
 
                 {/* Client Info */}
                 <div className="border-t pt-4">
@@ -143,8 +152,12 @@ const Testimonials = () => {
                       className="w-12 h-12 rounded-full object-cover bg-batik-cream"
                     />
                     <div>
-                      <div className="font-semibold text-batik-brown">{testimonial.name}</div>
-                      <div className="text-sm text-gray-500">{testimonial.role}</div>
+                      <div className="font-semibold text-batik-brown">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        {testimonial.role}
+                      </div>
                     </div>
                   </div>
 
@@ -175,7 +188,9 @@ const Testimonials = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-batik-brown mb-4">Video Testimoni</h2>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-batik-brown mb-4">
+              Video Testimoni
+            </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Dengarkan langsung pengalaman klien kami melalui video testimoni
             </p>
@@ -191,8 +206,12 @@ const Testimonials = () => {
                     </div>
                   </div>
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <h3 className="font-semibold mb-1">Testimoni Klien {index}</h3>
-                    <p className="text-sm opacity-90">CEO PT. Example {index}</p>
+                    <h3 className="font-semibold mb-1">
+                      Testimoni Klien {index}
+                    </h3>
+                    <p className="text-sm opacity-90">
+                      CEO PT. Example {index}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -208,8 +227,8 @@ const Testimonials = () => {
             Bergabunglah dengan Klien Puas Kami
           </h2>
           <p className="text-xl text-batik-cream mb-8 max-w-3xl mx-auto">
-            Ratusan klien telah mempercayakan proyek mereka kepada kami. Saatnya giliran Anda merasakan pengalaman yang
-            luar biasa.
+            Ratusan klien telah mempercayakan proyek mereka kepada kami. Saatnya
+            giliran Anda merasakan pengalaman yang luar biasa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-batik-gold hover:bg-batik-gold/90 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
@@ -222,7 +241,7 @@ const Testimonials = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Testimonials
+export default Testimonials;

@@ -458,7 +458,7 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Enhanced Interactive Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-batik-cream via-batik-gold/20 to-batik-brown/10">
+      <div className="absolute inset-0 bg-gradient-to-br from-batik-cream via-batik-gold/20 to-batik-brown/10 dark:from-gray-900 dark:via-batik-brown/30 dark:to-gray-950">
         <div className="absolute inset-0 opacity-30">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(218,165,32,0.3)_0%,transparent_50%)] animate-pulse"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,rgba(139,69,19,0.3)_0%,transparent_50%)] animate-pulse"></div>
@@ -497,12 +497,14 @@ const HeroSection = () => {
             )}
 
             {/* Title Text */}
-            <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-batik-brown mb-4 sm:mb-6 mt-8 sm:mt-12 leading-tight">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-batik-brown dark:text-batik-gold mb-4 sm:mb-6 mt-8 sm:mt-12 leading-tight">
               <span className="block">Warisan Budaya</span>
-              <span className="block text-batik-gold">Indonesia Modern</span>
+              <span className="block text-batik-gold dark:text-batik-cream">
+                Indonesia Modern
+              </span>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto animate-slide-up px-4 sm:px-0 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto animate-slide-up px-4 sm:px-0 leading-relaxed">
               Temukan keindahan handycraft Indonesia yang memadukan tradisi
               batik dengan desain kontemporer. Coba pengalaman membatik
               interaktif di bawah ini!
@@ -520,11 +522,6 @@ const HeroSection = () => {
               Jelajahi Produk
               <ArrowRight className="ml-2" size={16} />
             </Link>
-
-            <button className="w-full sm:w-auto border-2 border-batik-brown text-batik-brown hover:bg-batik-brown hover:text-white font-semibold py-2.5 sm:py-3 px-5 sm:px-6 rounded-lg transition-all duration-300 inline-flex items-center justify-center text-sm sm:text-base">
-              <Play className="mr-2" size={16} />
-              Tonton Video
-            </button>
           </div>
         </div>
 
@@ -533,8 +530,8 @@ const HeroSection = () => {
           <div className="w-full max-w-6xl mx-auto">
             {/* Instructions */}
             {showInstructions && (
-              <div className="mb-4 sm:mb-6 bg-batik-gold/10 border border-batik-gold/30 rounded-lg p-3 sm:p-4 animate-bounce mx-4 sm:mx-0">
-                <div className="flex items-center justify-center space-x-2 text-batik-brown">
+              <div className="mb-4 sm:mb-6 bg-batik-gold/10 dark:bg-batik-gold/5 border border-batik-gold/30 dark:border-batik-gold/20 rounded-lg p-3 sm:p-4 animate-bounce mx-4 sm:mx-0">
+                <div className="flex items-center justify-center space-x-2 text-batik-brown dark:text-batik-gold">
                   <Hand size={16} className="sm:w-5 sm:h-5" />
                   <span className="font-medium text-sm sm:text-base text-center">
                     {currentStep === 0 &&
@@ -552,8 +549,8 @@ const HeroSection = () => {
 
             {/* Motif Selector for Sketch Step */}
             {currentStep === 0 && (
-              <div className="mb-6 bg-white/80 backdrop-blur-sm rounded-lg p-4 border border-batik-gold/30">
-                <h3 className="font-serif text-lg font-semibold text-batik-brown mb-3">
+              <div className="mb-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-lg p-4 border border-batik-gold/30 dark:border-batik-gold/20">
+                <h3 className="font-serif text-lg font-semibold text-batik-brown dark:text-batik-gold mb-3">
                   Pilih Motif Batik:
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
@@ -563,13 +560,13 @@ const HeroSection = () => {
                       onClick={() => setSelectedMotif(index)}
                       className={`p-3 rounded-lg border-2 transition-all duration-200 ${
                         selectedMotif === index
-                          ? "border-batik-gold bg-batik-gold/20 shadow-lg"
-                          : "border-batik-brown/30 bg-white hover:bg-batik-cream"
+                          ? "border-batik-gold bg-batik-gold/20 shadow-lg dark:bg-batik-gold/10"
+                          : "border-batik-brown/30 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-batik-cream dark:hover:bg-gray-700"
                       }`}
                     >
                       <div className="text-center">
                         <div className="text-2xl mb-1">{motif.name}</div>
-                        <div className="text-xs text-gray-600">
+                        <div className="text-xs text-gray-600 dark:text-gray-300">
                           {motif.description}
                         </div>
                       </div>
@@ -581,14 +578,14 @@ const HeroSection = () => {
 
             {/* Color Controls for Coloring Step */}
             {currentStep === 2 && (
-              <div className="mb-6 bg-white/80 backdrop-blur-sm rounded-lg p-4 border border-batik-gold/30">
-                <h3 className="font-serif text-lg font-semibold text-batik-brown mb-4">
+              <div className="mb-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-lg p-4 border border-batik-gold/30 dark:border-batik-gold/20">
+                <h3 className="font-serif text-lg font-semibold text-batik-brown dark:text-batik-gold mb-4">
                   Pewarnaan Batik:
                 </h3>
 
                 {/* Target Selector */}
                 <div className="mb-4">
-                  <p className="text-sm text-gray-600 mb-3">
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
                     Pilih yang ingin diwarnai:
                   </p>
                   <div className="flex justify-center space-x-3">
@@ -596,8 +593,8 @@ const HeroSection = () => {
                       onClick={() => setColoringTarget("fabric")}
                       className={`px-4 py-2 rounded-lg border-2 transition-all duration-200 flex items-center space-x-2 ${
                         coloringTarget === "fabric"
-                          ? "border-batik-gold bg-batik-gold/20 text-batik-brown"
-                          : "border-gray-300 bg-white text-gray-600 hover:bg-gray-50"
+                          ? "border-batik-gold bg-batik-gold/20 text-batik-brown dark:text-batik-gold dark:bg-batik-gold/10"
+                          : "border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
                       }`}
                     >
                       <Shirt size={16} />
@@ -607,8 +604,8 @@ const HeroSection = () => {
                       onClick={() => setColoringTarget("motif")}
                       className={`px-4 py-2 rounded-lg border-2 transition-all duration-200 flex items-center space-x-2 ${
                         coloringTarget === "motif"
-                          ? "border-batik-gold bg-batik-gold/20 text-batik-brown"
-                          : "border-gray-300 bg-white text-gray-600 hover:bg-gray-50"
+                          ? "border-batik-gold bg-batik-gold/20 text-batik-brown dark:text-batik-gold dark:bg-batik-gold/10"
+                          : "border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
                       }`}
                     >
                       <Palette size={16} />
@@ -618,8 +615,8 @@ const HeroSection = () => {
                       onClick={() => setColoringTarget("canting")}
                       className={`px-4 py-2 rounded-lg border-2 transition-all duration-200 flex items-center space-x-2 ${
                         coloringTarget === "canting"
-                          ? "border-batik-gold bg-batik-gold/20 text-batik-brown"
-                          : "border-gray-300 bg-white text-gray-600 hover:bg-gray-50"
+                          ? "border-batik-gold bg-batik-gold/20 text-batik-brown dark:text-batik-gold dark:bg-batik-gold/10"
+                          : "border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
                       }`}
                     >
                       <Brush size={16} />
@@ -630,7 +627,7 @@ const HeroSection = () => {
 
                 {/* Color Palette */}
                 <div>
-                  <p className="text-sm text-gray-600 mb-3">
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
                     Pilih warna untuk{" "}
                     {coloringTarget === "fabric"
                       ? "kain"
@@ -648,10 +645,10 @@ const HeroSection = () => {
                         title={colorItem.name}
                       >
                         <div
-                          className="w-12 h-12 rounded-full border-4 border-white shadow-lg hover:scale-110 transition-transform duration-200"
+                          className="w-12 h-12 rounded-full border-4 border-white dark:border-gray-800 shadow-lg hover:scale-110 transition-transform duration-200"
                           style={{ backgroundColor: colorItem.color }}
                         ></div>
-                        <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-600 dark:text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                           {colorItem.name}
                         </div>
                       </button>
@@ -680,7 +677,7 @@ const HeroSection = () => {
             >
               {/* Fabric Texture */}
               <div className="absolute inset-0 opacity-20">
-                <div className="w-full h-full bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.1)_2px,rgba(0,0,0,0.1)_4px)]"></div>
+                <div className="w-full h-full bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.1)_2px,rgba(0,0,0,0.1)_4px)] bg-[repeating-linear-gradient(90deg,transparent,transparent_2px,rgba(0,0,0,0.1)_2px,rgba(0,0,0,0.1)_4px)]"></div>
               </div>
 
               {/* Rendered Motifs */}
@@ -823,7 +820,7 @@ const HeroSection = () => {
                   setWaxLineColor("#DAA520");
                   setColoringTarget("fabric");
                 }}
-                className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 mb-12"
+                className="px-4 py-2 bg-gray-500 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-600 dark:hover:bg-gray-600 transition-colors duration-200 mb-12"
               >
                 Reset Canvas
               </button>

@@ -1,14 +1,24 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { ExternalLink, Calendar, User, X, ShoppingCart, Heart, Share2, Star, MapPin, Phone, Mail } from "lucide-react"
-import { useCart } from "../context/CartContext"
+import { useState } from "react";
+import {
+  ExternalLink,
+  Calendar,
+  User,
+  X,
+  ShoppingCart,
+  Heart,
+  Share2,
+  Star,
+  MapPin,
+  Phone,
+  Mail,
+} from "lucide-react";
 
 const Product = () => {
-  const [activeFilter, setActiveFilter] = useState("all")
-  const [selectedProduct, setSelectedProduct] = useState(null)
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const { addToCart } = useCart()
+  const [activeFilter, setActiveFilter] = useState("all");
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const categories = [
     { id: "all", name: "Semua" },
@@ -16,14 +26,14 @@ const Product = () => {
     { id: "kain", name: "Kain Batik" },
     { id: "decor", name: "Dekorasi" },
     { id: "souvenir", name: "Souvenir" },
-  ]
+  ];
 
   const portfolioItems = [
     {
       id: 1,
       title: "Batik Design 1",
       category: "fashion",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Desain batik yang elegan dan modern.",
       image: "/portfolio/BATIK.jpg",
@@ -44,7 +54,7 @@ const Product = () => {
       id: 2,
       title: "Batik Design 2",
       category: "fashion",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Koleksi batik dengan motif yang unik.",
       image: "/portfolio/Batik1.jpg",
@@ -65,7 +75,7 @@ const Product = () => {
       id: 3,
       title: "Batik Design 3",
       category: "fashion",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Koleksi batik yang kaya warna.",
       image: "/portfolio/BATIK10.jpg",
@@ -86,7 +96,7 @@ const Product = () => {
       id: 4,
       title: "Batik Design 4",
       category: "fashion",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Desain batik yang terinspirasi dari budaya lokal.",
       image: "/portfolio/BATIK11.jpg",
@@ -107,7 +117,7 @@ const Product = () => {
       id: 5,
       title: "Batik Design 5",
       category: "fashion",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Koleksi batik dengan sentuhan modern.",
       image: "/portfolio/BATIK12.jpg",
@@ -128,7 +138,7 @@ const Product = () => {
       id: 6,
       title: "Batik Design 6",
       category: "fashion",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Koleksi batik yang cocok untuk berbagai acara.",
       image: "/portfolio/BATIK13.jpg",
@@ -149,7 +159,7 @@ const Product = () => {
       id: 7,
       title: "Batik Design 7",
       category: "fashion",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Desain batik yang elegan dan anggun.",
       image: "/portfolio/BATIK14.jpg",
@@ -170,7 +180,7 @@ const Product = () => {
       id: 8,
       title: "Batik Design 8",
       category: "fashion",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Koleksi batik dengan motif yang menarik.",
       image: "/portfolio/BATIK2.jpg",
@@ -191,7 +201,7 @@ const Product = () => {
       id: 9,
       title: "Batik Design 9",
       category: "fashion",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Desain batik yang modern dan stylish.",
       image: "/portfolio/BATIK3.jpg",
@@ -212,7 +222,7 @@ const Product = () => {
       id: 10,
       title: "Batik Design 10",
       category: "fashion",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Koleksi batik yang kaya akan detail.",
       image: "/portfolio/BATIK4.jpg",
@@ -233,7 +243,7 @@ const Product = () => {
       id: 11,
       title: "Batik Design 11",
       category: "fashion",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Desain batik yang cocok untuk acara formal.",
       image: "/portfolio/BATIK6.jpg",
@@ -254,7 +264,7 @@ const Product = () => {
       id: 12,
       title: "Batik Design 12",
       category: "fashion",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Koleksi batik dengan motif yang elegan.",
       image: "/portfolio/BATIK9.jpg",
@@ -275,7 +285,7 @@ const Product = () => {
       id: 13,
       title: "Batik Balian",
       category: "kain",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Desain batik yang terinspirasi dari Bali.",
       image: "/portfolio/BatikBalian.jpg",
@@ -296,7 +306,7 @@ const Product = () => {
       id: 14,
       title: "Batik Kawung",
       category: "kain",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Koleksi batik dengan motif Kawung.",
       image: "/portfolio/BatikKawung.webp",
@@ -317,7 +327,7 @@ const Product = () => {
       id: 15,
       title: "Batik Mega Mendung",
       category: "kain",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Desain batik Mega Mendung yang khas.",
       image: "/portfolio/BatikMegaMendung.webp",
@@ -338,7 +348,7 @@ const Product = () => {
       id: 16,
       title: "Batik Parang",
       category: "kain",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Koleksi batik dengan motif Parang.",
       image: "/portfolio/BatikParang.jpeg",
@@ -359,7 +369,7 @@ const Product = () => {
       id: 17,
       title: "Batik Parang 2",
       category: "kain",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Desain batik Parang yang unik.",
       image: "/portfolio/BatikParangg.jpg",
@@ -380,7 +390,7 @@ const Product = () => {
       id: 18,
       title: "Batik Solo Truntum",
       category: "kain",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Koleksi batik Solo Truntum yang elegan.",
       image: "/portfolio/BatikSoloTruntum1.jpg",
@@ -401,7 +411,7 @@ const Product = () => {
       id: 19,
       title: "Hiasan Dinding 1",
       category: "decor",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Dekorasi batik yang indah.",
       image: "/portfolio/DekorasiBatik1.jpg",
@@ -422,7 +432,7 @@ const Product = () => {
       id: 20,
       title: "Hiasan Dinding 2",
       category: "decor",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Dekorasi dinding dengan motif batik.",
       image: "/portfolio/DekorDinding.jpg",
@@ -443,7 +453,7 @@ const Product = () => {
       id: 21,
       title: "Hiasan Dinding 3",
       category: "decor",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Hiasan dinding yang menarik.",
       image: "/portfolio/HiasanDinding3.jpg",
@@ -464,7 +474,7 @@ const Product = () => {
       id: 22,
       title: "Batik Kawung 2",
       category: "kain",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Koleksi batik Kawung yang menarik.",
       image: "/portfolio/Kawung2.webp",
@@ -485,7 +495,7 @@ const Product = () => {
       id: 23,
       title: "Batik Mega Mendung 2",
       category: "kain",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Desain batik Mega Mendung yang khas.",
       image: "/portfolio/MegaMendung.jpg",
@@ -506,7 +516,7 @@ const Product = () => {
       id: 24,
       title: "Batik Sekar Jagad 1",
       category: "kain",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Koleksi batik Sekar Jagad.",
       image: "/portfolio/SekarJagad3.jpg",
@@ -527,7 +537,7 @@ const Product = () => {
       id: 25,
       title: "Batik Sekar Jagad 2",
       category: "kain",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Koleksi batik Sekar Jagad.",
       image: "/portfolio/SekarJagad4.jpg",
@@ -548,7 +558,7 @@ const Product = () => {
       id: 26,
       title: "Batik Sekar Jagat 3",
       category: "kain",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Koleksi batik Sekar Jagat.",
       image: "/portfolio/SekarJagat1.jpg",
@@ -569,7 +579,7 @@ const Product = () => {
       id: 27,
       title: "Batik Sekar Jagad 4",
       category: "kain",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Koleksi batik Sekar Jagad.",
       image: "/portfolio/SekatrJagad2.jpg",
@@ -590,7 +600,7 @@ const Product = () => {
       id: 28,
       title: "Souvenir 1",
       category: "souvenir",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Souvenir batik yang menarik.",
       image: "/portfolio/Souvenir1.jpg",
@@ -611,7 +621,7 @@ const Product = () => {
       id: 29,
       title: "Souvenir 2",
       category: "souvenir",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Souvenir batik yang unik.",
       image: "/portfolio/Souvenir11.png",
@@ -632,7 +642,7 @@ const Product = () => {
       id: 30,
       title: "Souvenir 3",
       category: "souvenir",
-      client: "Domesa",
+      client: "Batik Keris",
       year: "2023",
       description: "Souvenir batik yang menarik.",
       image: "/portfolio/Souvenir3.jpg",
@@ -652,64 +662,73 @@ const Product = () => {
   ];
 
   const filteredItems =
-    activeFilter === "all" ? portfolioItems : portfolioItems.filter((item) => item.category === activeFilter)
+    activeFilter === "all"
+      ? portfolioItems
+      : portfolioItems.filter((item) => item.category === activeFilter);
 
+  // Global function to handle product detail view
   const handleViewDetail = (productId) => {
-    const product = portfolioItems.find((item) => item.id === productId)
+    const product = portfolioItems.find((item) => item.id === productId);
     if (product) {
-      setSelectedProduct(product)
-      setIsModalOpen(true)
+      setSelectedProduct(product);
+      setIsModalOpen(true);
     }
-  }
+  };
 
   const closeModal = () => {
-    setIsModalOpen(false)
-    setSelectedProduct(null)
-  }
-
-  const handleAddToCart = (product) => {
-    addToCart(product)
-    // Show success message
-    alert(`${product.title} berhasil ditambahkan ke keranjang!`)
-  }
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+  };
 
   // Function to render star rating
   const renderStars = (rating) => {
-    const stars = []
-    const fullStars = Math.floor(rating)
-    const hasHalfStar = rating % 1 !== 0
+    const stars = [];
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
 
     for (let i = 0; i < fullStars; i++) {
-      stars.push(<Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />)
+      stars.push(
+        <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />
+      );
     }
 
     if (hasHalfStar) {
-      stars.push(<Star key="half" size={16} className="fill-yellow-400/50 text-yellow-400" />)
+      stars.push(
+        <Star
+          key="half"
+          size={16}
+          className="fill-yellow-400/50 text-yellow-400"
+        />
+      );
     }
 
-    const emptyStars = 5 - Math.ceil(rating)
+    const emptyStars = 5 - Math.ceil(rating);
     for (let i = 0; i < emptyStars; i++) {
-      stars.push(<Star key={`empty-${i}`} size={16} className="text-gray-300" />)
+      stars.push(
+        <Star key={`empty-${i}`} size={16} className="text-gray-300" />
+      );
     }
 
-    return stars
-  }
+    return stars;
+  };
 
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-batik-cream to-batik-gold/20">
+      <section className="py-20 bg-gradient-to-br from-batik-cream to-batik-gold/20 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-batik-brown mb-6">Product Kami</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Jelajahi berbagai produk batik berkualitas tinggi yang telah kami ciptakan dengan penuh dedikasi dan
-            keahlian.
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-batik-brown dark:text-batik-gold mb-6">
+            Product Kami
+          </h1>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Jelajahi berbagai produk batik berkualitas tinggi yang telah kami
+            ciptakan dengan penuh dedikasi dan keahlian.
           </p>
         </div>
       </section>
 
       {/* Filter Buttons */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
@@ -719,7 +738,7 @@ const Product = () => {
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   activeFilter === category.id
                     ? "bg-batik-gold text-white shadow-lg"
-                    : "bg-gray-100 text-gray-600 hover:bg-batik-cream"
+                    : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-batik-cream dark:hover:bg-gray-700"
                 }`}
               >
                 {category.name}
@@ -732,7 +751,7 @@ const Product = () => {
             {filteredItems.map((item) => (
               <div
                 key={item.id}
-                className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+                className="group bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -761,17 +780,24 @@ const Product = () => {
                 <div className="p-6">
                   <div className="flex flex-wrap gap-2 mb-3">
                     {item.tags.map((tag, index) => (
-                      <span key={index} className="text-xs bg-batik-cream text-batik-brown px-2 py-1 rounded-full">
+                      <span
+                        key={index}
+                        className="text-xs bg-batik-cream dark:bg-batik-gold/20 text-batik-brown dark:text-batik-gold px-2 py-1 rounded-full"
+                      >
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <h3 className="font-serif text-xl font-semibold text-batik-brown mb-2">{item.title}</h3>
+                  <h3 className="font-serif text-xl font-semibold text-batik-brown dark:text-batik-gold mb-2">
+                    {item.title}
+                  </h3>
 
-                  <p className="text-gray-600 mb-4 text-sm">{item.description}</p>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                    {item.description}
+                  </p>
 
-                  <div className="space-y-2 text-sm text-gray-500">
+                  <div className="space-y-2 text-sm text-gray-500 dark:text-gray-400">
                     <div className="flex items-center space-x-2">
                       <User size={14} />
                       <span>{item.client}</span>
@@ -785,8 +811,12 @@ const Product = () => {
                   {/* Rating */}
                   {item.rating && (
                     <div className="flex items-center space-x-2 mt-3">
-                      <div className="flex space-x-1">{renderStars(item.rating)}</div>
-                      <span className="text-sm text-gray-500">({item.reviews})</span>
+                      <div className="flex space-x-1">
+                        {renderStars(item.rating)}
+                      </div>
+                      <span className="text-sm text-gray-500">
+                        ({item.reviews})
+                      </span>
                     </div>
                   )}
                 </div>
@@ -796,14 +826,19 @@ const Product = () => {
         </div>
       </section>
 
-      {/* Product Detail Modal - New Design */}
+      {/* Product Detail Modal */}
       {isModalOpen && selectedProduct && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-white dark:bg-gray-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             {/* Modal Header */}
-            <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between rounded-t-2xl">
-              <h2 className="font-serif text-2xl font-bold text-batik-brown">{selectedProduct.title}</h2>
-              <button onClick={closeModal} className="p-2 hover:bg-gray-100 rounded-full transition-colors">
+            <div className="sticky top-0 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 p-6 flex items-center justify-between rounded-t-2xl">
+              <h2 className="font-serif text-2xl font-bold text-batik-brown dark:text-batik-gold">
+                {selectedProduct.title}
+              </h2>
+              <button
+                onClick={closeModal}
+                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+              >
                 <X size={24} className="text-gray-500" />
               </button>
             </div>
@@ -821,10 +856,7 @@ const Product = () => {
 
                   {/* Action Buttons */}
                   <div className="flex space-x-3">
-                    <button
-                      onClick={() => handleAddToCart(selectedProduct)}
-                      className="flex-1 bg-batik-gold text-white py-3 px-4 rounded-lg font-semibold hover:bg-batik-brown transition-colors flex items-center justify-center space-x-2"
-                    >
+                    <button className="flex-1 bg-batik-gold text-white py-3 px-4 rounded-lg font-semibold hover:bg-batik-brown transition-colors flex items-center justify-center space-x-2">
                       <ShoppingCart size={20} />
                       <span>Tambah ke Keranjang</span>
                     </button>
@@ -841,38 +873,64 @@ const Product = () => {
                 <div className="space-y-6">
                   {/* Price and Rating */}
                   <div className="space-y-3">
-                    <div className="text-3xl font-bold text-batik-brown">{selectedProduct.price}</div>
+                    <div className="text-3xl font-bold text-batik-brown dark:text-batik-gold">
+                      {selectedProduct.price}
+                    </div>
                     <div className="flex items-center space-x-3">
-                      <div className="flex space-x-1">{renderStars(selectedProduct.rating)}</div>
-                      <span className="text-gray-600">({selectedProduct.reviews} ulasan)</span>
+                      <div className="flex space-x-1">
+                        {renderStars(selectedProduct.rating)}
+                      </div>
+                      <span className="text-gray-600 dark:text-gray-400">
+                        ({selectedProduct.reviews} ulasan)
+                      </span>
                     </div>
                   </div>
 
                   {/* Description */}
                   <div>
-                    <h3 className="font-semibold text-batik-brown mb-2">Deskripsi</h3>
-                    <p className="text-gray-600 leading-relaxed">{selectedProduct.detailDescription}</p>
+                    <h3 className="font-semibold text-batik-brown dark:text-batik-gold mb-2">
+                      Deskripsi
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                      {selectedProduct.detailDescription}
+                    </p>
                   </div>
 
                   {/* Specifications */}
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <h4 className="font-semibold text-batik-brown mb-2">Spesifikasi</h4>
-                      <div className="space-y-2 text-sm">
+                      <h4 className="font-semibold text-batik-brown dark:text-batik-gold mb-2">
+                        Spesifikasi
+                      </h4>
+                      <div className="space-y-2 text-sm dark:text-gray-300">
                         <div className="flex justify-between">
-                          <span className="text-gray-600">Material:</span>
-                          <span className="font-medium">{selectedProduct.material}</span>
+                          <span className="text-gray-600 dark:text-gray-400">
+                            Material:
+                          </span>
+                          <span className="font-medium">
+                            {selectedProduct.material}
+                          </span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-gray-600">Ukuran:</span>
-                          <span className="font-medium">{selectedProduct.size}</span>
+                          <span className="text-gray-600 dark:text-gray-400">
+                            Ukuran:
+                          </span>
+                          <span className="font-medium">
+                            {selectedProduct.size}
+                          </span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-gray-600">Stok:</span>
-                          <span className="font-medium">{selectedProduct.stock} pcs</span>
+                          <span className="text-gray-600 dark:text-gray-400">
+                            Stok:
+                          </span>
+                          <span className="font-medium">
+                            {selectedProduct.stock} pcs
+                          </span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-gray-600">Asal:</span>
+                          <span className="text-gray-600 dark:text-gray-400">
+                            Asal:
+                          </span>
                           <span className="font-medium flex items-center">
                             <MapPin size={12} className="mr-1" />
                             {selectedProduct.origin}
@@ -882,10 +940,15 @@ const Product = () => {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-batik-brown mb-2">Warna Tersedia</h4>
+                      <h4 className="font-semibold text-batik-brown dark:text-batik-gold mb-2">
+                        Warna Tersedia
+                      </h4>
                       <div className="flex flex-wrap gap-2">
                         {selectedProduct.colors.map((color, index) => (
-                          <span key={index} className="px-3 py-1 bg-batik-cream text-batik-brown text-xs rounded-full">
+                          <span
+                            key={index}
+                            className="px-3 py-1 bg-batik-cream dark:bg-batik-gold/20 text-batik-brown dark:text-batik-gold text-xs rounded-full"
+                          >
                             {color}
                           </span>
                         ))}
@@ -895,16 +958,25 @@ const Product = () => {
 
                   {/* Care Instructions */}
                   <div>
-                    <h4 className="font-semibold text-batik-brown mb-2">Petunjuk Perawatan</h4>
-                    <p className="text-gray-600 text-sm">{selectedProduct.care}</p>
+                    <h4 className="font-semibold text-batik-brown dark:text-batik-gold mb-2">
+                      Petunjuk Perawatan
+                    </h4>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">
+                      {selectedProduct.care}
+                    </p>
                   </div>
 
                   {/* Tags */}
                   <div>
-                    <h4 className="font-semibold text-batik-brown mb-2">Tags</h4>
+                    <h4 className="font-semibold text-batik-brown dark:text-batik-gold mb-2">
+                      Tags
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       {selectedProduct.tags.map((tag, index) => (
-                        <span key={index} className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
+                        <span
+                          key={index}
+                          className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded-full"
+                        >
                           {tag}
                         </span>
                       ))}
@@ -914,30 +986,42 @@ const Product = () => {
               </div>
 
               {/* Contact Information */}
-              <div className="mt-8 p-6 bg-batik-cream/30 rounded-xl">
-                <h3 className="font-serif text-lg font-semibold text-batik-brown mb-4">
+              <div className="mt-8 p-6 bg-batik-cream/30 dark:bg-gray-800 rounded-xl">
+                <h3 className="font-serif text-lg font-semibold text-batik-brown dark:text-batik-gold mb-4">
                   Butuh Informasi Lebih Lanjut?
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="flex items-center space-x-3">
                     <Phone size={20} className="text-batik-gold" />
                     <div>
-                      <div className="font-medium text-batik-brown">Telepon</div>
-                      <div className="text-sm text-gray-600">+62 895-2489-3101</div>
+                      <div className="font-medium text-batik-brown dark:text-batik-gold">
+                        Telepon
+                      </div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400">
+                        +62 895-2489-3101
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Mail size={20} className="text-batik-gold" />
                     <div>
-                      <div className="font-medium text-batik-brown">Email</div>
-                      <div className="text-sm text-gray-600">info@domesa.co</div>
+                      <div className="font-medium text-batik-brown dark:text-batik-gold">
+                        Email
+                      </div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400">
+                        info@domesa.co
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
                     <MapPin size={20} className="text-batik-gold" />
                     <div>
-                      <div className="font-medium text-batik-brown">Lokasi</div>
-                      <div className="text-sm text-gray-600">Palembang, Indonesia</div>
+                      <div className="font-medium text-batik-brown dark:text-batik-gold">
+                        Lokasi
+                      </div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400">
+                        Palembang, Indonesia
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -948,28 +1032,42 @@ const Product = () => {
       )}
 
       {/* Stats Section */}
-      <section className="py-20 bg-batik-cream/30">
+      <section className="py-20 bg-batik-cream/30 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl font-bold text-batik-brown mb-4">Pencapaian Kami</h2>
-            <p className="text-gray-600">Angka-angka yang menunjukkan dedikasi dan kepercayaan klien</p>
+            <h2 className="font-serif text-3xl font-bold text-batik-brown dark:text-batik-gold mb-4">
+              Pencapaian Kami
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300">
+              Angka-angka yang menunjukkan dedikasi dan kepercayaan klien
+            </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-serif font-bold text-batik-brown mb-2">150+</div>
-              <div className="text-gray-600">Proyek Selesai</div>
+              <div className="text-4xl font-serif font-bold text-batik-brown dark:text-batik-gold mb-2">
+                150+
+              </div>
+              <div className="text-gray-600 dark:text-gray-400">
+                Proyek Selesai
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-serif font-bold text-batik-brown mb-2">50+</div>
+              <div className="text-4xl font-serif font-bold text-batik-brown mb-2">
+                50+
+              </div>
               <div className="text-gray-600">Klien Korporat</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-serif font-bold text-batik-brown mb-2">98%</div>
+              <div className="text-4xl font-serif font-bold text-batik-brown mb-2">
+                98%
+              </div>
               <div className="text-gray-600">Tingkat Kepuasan</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-serif font-bold text-batik-brown mb-2">15+</div>
+              <div className="text-4xl font-serif font-bold text-batik-brown mb-2">
+                15+
+              </div>
               <div className="text-gray-600">Tahun Pengalaman</div>
             </div>
           </div>
@@ -979,9 +1077,12 @@ const Product = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-batik-brown to-batik-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">Tertarik Berkolaborasi?</h2>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">
+            Tertarik Berkolaborasi?
+          </h2>
           <p className="text-xl text-batik-cream mb-8 max-w-3xl mx-auto">
-            Mari wujudkan proyek impian Anda bersama tim profesional kami. Konsultasi gratis untuk semua jenis proyek.
+            Mari wujudkan proyek impian Anda bersama tim profesional kami.
+            Konsultasi gratis untuk semua jenis proyek.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-batik-gold hover:bg-batik-gold/90 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
@@ -994,7 +1095,7 @@ const Product = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;
